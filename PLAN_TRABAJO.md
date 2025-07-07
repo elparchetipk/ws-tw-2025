@@ -1383,320 +1383,456 @@ La transition hacia Phase 3 (React Advanced y Ecosystem) requiere demonstration 
 
 ## FASE 3: REACT AVANZADO Y ARQUITECTURA ESCALABLE
 
-Semanas 5 y 6 - Plan Detallado Día a Día
+*Semanas 5 y 6 - Plan Detallado Día a Día*
+
 Esta tercera fase eleva a los aprendices hacia el dominio completo de React avanzado, introduciendo conceptos arquitecturales sofisticados que son fundamentales para aplicaciones empresariales. El enfoque pedagógico se intensifica, combinando teoría profunda con implementación práctica de patterns complejos que preparan para el desarrollo profesional de nivel senior.
 
-SEMANA 5: CONTEXT API MASTERY Y REACT ROUTER
-DÍA 25 - LUNES: Context API Profundo y Estado Global Arquitectural
-9:00 - 9:15 | Phase 3 Advanced Kickoff (15 min) Bienvenida a conceptos de nivel arquitectural, establecimiento de expectativas para patterns empresariales y preparación mental para la complejidad que manejarán aplicaciones reales de gran escala.
+### SEMANA 5: CONTEXT API MASTERY Y REACT ROUTER
 
-9:15 - 10:45 | Context API Architecture Deep Dive (90 min) El Context API representa mucho más que una alternativa al prop drilling. Exploraremos cómo diseñar arquitecturas de estado global que escalen efectivamente, entendiendo las implicaciones de performance cuando múltiples components consumen el mismo context. Analizaremos casos de uso reales donde Context es la solución apropiada versus cuándo puede introducir más complejidad de la necesaria. Práctica guiada: Implementación de sistema de autenticación global con roles y permisos que simule aplicaciones empresariales reales.
+###### DÍA 25 - LUNES: Context API Profundo y Estado Global Arquitectural
 
-10:45 - 11:00 | Descanso (15 min)
+**9:00 - 9:15 | Phase 3 Advanced Kickoff (15 min) Bienvenida a conceptos de nivel arquitectural, establecimiento de expectativas para patterns empresariales y preparación mental para la complejidad que manejarán aplicaciones reales de gran escala.**
 
-11:00 - 12:30 | Context Performance Patterns y Optimization (90 min) La performance en Context API requiere entendimiento profundo de cómo React maneja re-renders. Estudiaremos técnicas avanzadas de memoization, context splitting strategies para prevenir cascading re-renders, y patterns de composition que mantienen la performance mientras escalan la funcionalidad. Implementaremos context providers que pueden manejar state updates complejos sin comprometer la user experience. Proyecto práctico: Sistema de notificaciones global con múltiples tipos de notificaciones, prioridades, y gestión de estado temporal.
+**9:15 - 10:45 | Context API Architecture Deep Dive (90 min)**
 
-12:30 - 13:30 | Almuerzo (60 min)
+ El Context API representa mucho más que una alternativa al prop drilling. Exploraremos cómo diseñar arquitecturas de estado global que escalen efectivamente, entendiendo las implicaciones de performance cuando múltiples components consumen el mismo context. Analizaremos casos de uso reales donde Context es la solución apropiada versus cuándo puede introducir más complejidad de la necesaria. Práctica guiada: Implementación de sistema de autenticación global con roles y permisos que simule aplicaciones empresariales reales.
 
-13:30 - 15:00 | useReducer Advanced Patterns (90 min) useReducer trasciende el simple state management, convirtiéndose en una herramienta arquitectural para modeling complex business logic. Exploraremos reducer composition patterns, action creators sophisticados, y middleware concepts que prepare para libraries como Redux. Entenderemos cuándo useReducer es superior a useState y cómo diseñar reducers que sean testeable, maintainable, y extensible. Desarrollo práctico: Task management system con workflow states, user permissions, y business rules complejas implementadas através de reducer logic.
+**10:45 - 11:00 | Descanso (15 min)**
 
-15:00 - 15:15 | Descanso (15 min)
+**11:00 - 12:30 | Context Performance Patterns y Optimization (90 min)**
 
-15:15 - 17:00 | Context + useReducer Architectural Pattern (105 min) La combinación de Context y useReducer crea una arquitectura de estado global poderosa que rivaliza con solutions externes. Pair Programming: Desarrollaremos un sistema de e-commerce completo donde context maneja user state, shopping cart state, y application configuration, mientras useReducer gestiona complex business logic como pricing calculations, inventory management, y order processing. Esta implementation servirá como foundation para entender cuándo esta pattern es appropriada versus cuándo considerar external state management libraries.
+ La performance en Context API requiere entendimiento profundo de cómo React maneja re-renders. Estudiaremos técnicas avanzadas de memoization, context splitting strategies para prevenir cascading re-renders, y patterns de composition que mantienen la performance mientras escalan la funcionalidad. Implementaremos context providers que pueden manejar state updates complejos sin comprometer la user experience. Proyecto práctico: Sistema de notificaciones global con múltiples tipos de notificaciones, prioridades, y gestión de estado temporal.
 
-17:00 - 17:15 | Descanso (15 min)
+**12:30 - 13:30 | Almuerzo (60 min)**
 
-17:15 - 19:00 | Global State Testing Strategies (105 min) Testing global state requiere strategies específicas que difieren del component testing traditional. Aprenderemos a test context providers en isolation, mock context values effectively para unit testing, y implementar integration tests que validen complex state interactions. Implementación práctica: Comprehensive testing suite para el e-commerce system desarrollado, incluyendo edge cases, error conditions, y performance scenarios que reflejen testing requirements en environments de producción.
+**13:30 - 15:00 | useReducer Advanced Patterns (90 min)** 
 
-19:00 - 20:00 | State Architecture Documentation y Best Practices (60 min) Documentation de arquitecturas de estado complejas es crítica para team collaboration y maintenance a largo plazo. Estableceremos conventions para documenting context APIs, state flow diagrams, y decision records que expliquen architectural choices. Assessment: Cada team presentará su arquitectura de estado, explicando trade-offs, performance considerations, y extensibility plans.
+useReducer trasciende el simple state management, convirtiéndose en una herramienta arquitectural para modeling complex business logic. Exploraremos reducer composition patterns, action creators sophisticados, y middleware concepts que prepare para libraries como Redux. Entenderemos cuándo useReducer es superior a useState y cómo diseñar reducers que sean testeable, maintainable, y extensible. Desarrollo práctico: Task management system con workflow states, user permissions, y business rules complejas implementadas através de reducer logic.
 
-DÍA 26 - MARTES: React Router y Single Page Application Architecture
-9:00 - 9:15 | Daily Standup (15 min) Transición hacia navigation y routing concepts que transforman React applications en SPAs completamente funcionales.
+**15:00 - 15:15 | Descanso (15 min)**
 
-9:15 - 10:45 | React Router Fundamentals y SPA Architecture (90 min) Single Page Applications requieren sophisticated routing que vaya más allá de simple page navigation. Exploraremos React Router como el foundation para creating application experiences que rivalizan con traditional multi-page websites, pero con la performance y user experience benefits de SPAs. Entenderemos browser history management, URL structure design, y SEO considerations que son críticas para production applications. Práctica guiada: Setup de application architecture con nested routing, protected routes, y dynamic route generation.
+**15:15 - 17:00 | Context + useReducer Architectural Pattern (105 min)** 
 
-10:45 - 11:00 | Descanso (15 min)
+La combinación de Context y useReducer crea una arquitectura de estado global poderosa que rivaliza con solutions externes. Pair Programming: Desarrollaremos un sistema de e-commerce completo donde context maneja user state, shopping cart state, y application configuration, mientras useReducer gestiona complex business logic como pricing calculations, inventory management, y order processing. Esta implementation servirá como foundation para entender cuándo esta pattern es appropriada versus cuándo considerar external state management libraries.
 
-11:00 - 12:30 | Advanced Routing Patterns (90 min) Professional applications requieren routing patterns sophisticados que manejen authentication, authorization, lazy loading, y complex navigation flows. Implementaremos route guards para protected content, nested routing structures que reflejen application hierarchy, y dynamic routing que permita flexible URL structures. Proyecto práctico: Movie database application con genres, search results, individual movie pages, user profiles, y admin sections que demuestren different routing strategies.
+**17:00 - 17:15 | Descanso (15 min)**
 
-12:30 - 13:30 | Almuerzo (60 min)
+**17:15 - 19:00 | Global State Testing Strategies (105 min)** 
 
-13:30 - 15:00 | Programmatic Navigation y State Synchronization (90 min) Navigation en applications modernas debe ser controllable programmatically para creating seamless user experiences. Aprenderemos useNavigate hook para complex navigation flows, location state management para passing data between routes, y URL parameter handling para maintaining application state através de page refreshes. Desarrollo práctico: Multi-step wizard que utiliza routing para maintaining progress state, backward/forward navigation, y deep linking capabilities.
+Testing global state requiere strategies específicas que difieren del component testing traditional. Aprenderemos a test context providers en isolation, mock context values effectively para unit testing, y implementar integration tests que validen complex state interactions. Implementación práctica: Comprehensive testing suite para el e-commerce system desarrollado, incluyendo edge cases, error conditions, y performance scenarios que reflejen testing requirements en environments de producción.
 
-15:00 - 15:15 | Descanso (15 min)
+**19:00 - 20:00 | State Architecture Documentation y Best Practices (60 min)** 
 
-15:15 - 17:00 | Route-based Code Splitting Preview (105 min) Code splitting at the route level es una optimization technique crítica para large applications. Exploraremos conceptos de lazy loading para routes, loading states management durante route transitions, y error boundaries específicamente diseñadas para route-level errors. Pair Programming: Implementation de movie database con route-based code splitting, optimizing initial bundle size mientras maintaining smooth user experience durante navigation.
+Documentation de arquitecturas de estado complejas es crítica para team collaboration y maintenance a largo plazo. Estableceremos conventions para documenting context APIs, state flow diagrams, y decision records que expliquen architectural choices. Assessment: Cada team presentará su arquitectura de estado, explicando trade-offs, performance considerations, y extensibility plans.
 
-17:00 - 17:15 | Descanso (15 min)
+###### DÍA 26 - MARTES: React Router y Single Page Application Architecture
 
-17:15 - 19:00 | URL Design y SEO Considerations (105 min) URL structure en SPAs requiere careful planning para SEO, user experience, y maintainability. Diseñaremos URL schemas que sean intuitive para users, SEO-friendly para search engines, y maintainable para developers. Implementación práctica: URL structure optimization para movie database, implementing breadcrumb navigation que refleje URL hierarchy, y meta tag management para different pages.
+**9:00 - 9:15 | Daily Standup (15 min) Transición hacia navigation y routing concepts que transforman React applications en SPAs completamente funcionales.**
 
-19:00 - 20:00 | Routing Testing y Integration (60 min) Testing routing logic requiere specialized approaches que validen navigation flows, route protection, y URL state management. Implementaremos tests que cubran user navigation journeys, protected route access attempts, y URL parameter handling. Práctica: Testing suite completa para movie database routing functionality.
+**9:15 - 10:45 | React Router Fundamentals y SPA Architecture (90 min)** 
 
-DÍA 27 - MIÉRCOLES: Lazy Loading, Suspense y Performance Architecture
-9:00 - 9:15 | Daily Standup (15 min) Introduction a performance optimization concepts que son fundamentales para scalable React applications.
+Single Page Applications requieren sophisticated routing que vaya más allá de simple page navigation. Exploraremos React Router como el foundation para creating application experiences que rivalizan con traditional multi-page websites, pero con la performance y user experience benefits de SPAs. Entenderemos browser history management, URL structure design, y SEO considerations que son críticas para production applications. Práctica guiada: Setup de application architecture con nested routing, protected routes, y dynamic route generation.
 
-9:15 - 10:45 | Lazy Loading Fundamentals y React.lazy (90 min) Performance optimization en React applications modernas requiere strategic lazy loading que balance user experience con resource efficiency. React.lazy provides elegant solutions para component-level code splitting, pero requires understanding de cuándo aplicar esta optimization sin degradar user experience. Analizaremos bundling strategies, chunk size optimization, y loading priority planning que reflejen production application requirements. Práctica guiada: Conversion de movie database hacia lazy-loaded architecture con intelligent preloading strategies.
+**10:45 - 11:00 | Descanso (15 min)**
 
-10:45 - 11:00 | Descanso (15 min)
+**11:00 - 12:30 | Advanced Routing Patterns (90 min)** 
 
-11:00 - 12:30 | Suspense API y Error Boundaries Integration (90 min) Suspense representa un paradigm shift en cómo React maneja asynchronous operations y loading states. Exploraremos Suspense boundaries para graceful loading experiences, error boundaries coordination para robust error handling, y nested Suspense patterns para granular loading control. Understanding estas concepts prepara para concurrent features y advanced performance optimizations. Proyecto práctico: Implementation de loading states sophisticados que provide feedback durante resource loading sin compromising perceived performance.
+Professional applications requieren routing patterns sophisticados que manejen authentication, authorization, lazy loading, y complex navigation flows. Implementaremos route guards para protected content, nested routing structures que reflejen application hierarchy, y dynamic routing que permita flexible URL structures. Proyecto práctico: Movie database application con genres, search results, individual movie pages, user profiles, y admin sections que demuestren different routing strategies.
 
-12:30 - 13:30 | Almuerzo (60 min)
+**12:30 - 13:30 | Almuerzo (60 min)**
 
-13:30 - 15:00 | Performance Profiling y Optimization Strategies (90 min) Production React applications requieren systematic performance monitoring y optimization. Utilizaremos React DevTools Profiler para identifying performance bottlenecks, analyzing component render cycles, y measuring optimization impact. Estableceremos performance budgets y monitoring strategies que pueden ser applied en production environments. Desarrollo práctico: Performance audit completo de movie database application con identification de optimization opportunities y implementation de solutions.
+**13:30 - 15:00 | Programmatic Navigation y State Synchronization (90 min)** 
 
-15:00 - 15:15 | Descanso (15 min)
+Navigation en applications modernas debe ser controllable programmatically para creating seamless user experiences. Aprenderemos useNavigate hook para complex navigation flows, location state management para passing data between routes, y URL parameter handling para maintaining application state através de page refreshes. Desarrollo práctico: Multi-step wizard que utiliza routing para maintaining progress state, backward/forward navigation, y deep linking capabilities.
 
-15:15 - 17:00 | Advanced Memoization Techniques (105 min) Memoization en React va beyond basic React.memo usage, requiring sophisticated understanding de dependency tracking, comparison functions, y strategic application que no compromise code maintainability. Pair Programming: Implementation de optimization strategies para movie database que incluyan custom comparison functions, selective memoization based on user interaction patterns, y performance monitoring que valide optimization effectiveness.
+**15:00 - 15:15 | Descanso (15 min)**
 
-17:00 - 17:15 | Descanso (15 min)
+**15:15 - 17:00 | Route-based Code Splitting Preview (105 min)** 
 
-17:15 - 19:00 | Bundle Analysis y Code Splitting Strategies (105 min) Understanding bundle composition es crítico para optimization decisions. Utilizaremos webpack bundle analyzer y otras tools para visualizing código distribution, identifying unused dependencies, y planning code splitting strategies que optimize loading performance. Implementación práctica: Bundle optimization workshop donde cada team analiza su application bundle y implementa targeted optimizations based on actual usage patterns.
+Code splitting at the route level es una optimization technique crítica para large applications. Exploraremos conceptos de lazy loading para routes, loading states management durante route transitions, y error boundaries específicamente diseñadas para route-level errors. Pair Programming: Implementation de movie database con route-based code splitting, optimizing initial bundle size mientras maintaining smooth user experience durante navigation.
 
-19:00 - 20:00 | Performance Testing y Monitoring (60 min) Performance testing debe be integrated en development workflow para ensuring optimizations remain effective através de application evolution. Estableceremos automated performance testing usando tools como Lighthouse, implementaremos performance regression detection, y crearemos performance dashboards que pueden monitor application health en production environments.
+**17:00 - 17:15 | Descanso (15 min)**
 
-DÍA 28 - JUEVES: Advanced Component Patterns y Render Optimization
-9:00 - 9:15 | Daily Standup (15 min) Focus en patterns architecturales avanzados que enable component reusability y maintainability en large codebases.
+**17:15 - 19:00 | URL Design y SEO Considerations (105 min)** 
 
-9:15 - 10:45 | Compound Components Advanced Implementation (90 min) Compound components enable creation de flexible, reusable UI elements que maintain consistency mientras providing customization flexibility. This pattern es extensively used en design systems y component libraries que must support diverse use cases. Exploraremos implementation techniques que provide type safety, accessibility integration, y flexible composition mientras maintaining simplicity para component consumers. Práctica guiada: Development de complete modal system usando compound pattern que handles focus management, keyboard interactions, y complex content composition.
+URL structure en SPAs requiere careful planning para SEO, user experience, y maintainability. Diseñaremos URL schemas que sean intuitive para users, SEO-friendly para search engines, y maintainable para developers. Implementación práctica: URL structure optimization para movie database, implementing breadcrumb navigation que refleje URL hierarchy, y meta tag management para different pages.
 
-10:45 - 11:00 | Descanso (15 min)
+**19:00 - 20:00 | Routing Testing y Integration (60 min)** 
 
-11:00 - 12:30 | Render Props y Function as Children Patterns (90 min) Render props y function as children patterns provide powerful abstraction capabilities para sharing stateful logic between components. These patterns enable creation de highly reusable components que can adapt to diverse UI requirements mientras maintaining consistent behavior. Understanding estas techniques es crucial para developing component libraries y design systems que scale across teams y projects. Proyecto práctico: Data fetching component using render props pattern que handles loading states, error conditions, y data transformation mientras providing maximum flexibility para rendering logic.
+Testing routing logic requiere specialized approaches que validen navigation flows, route protection, y URL state management. Implementaremos tests que cubran user navigation journeys, protected route access attempts, y URL parameter handling. Práctica: Testing suite completa para movie database routing functionality.
 
-12:30 - 13:30 | Almuerzo (60 min)
+###### DÍA 27 - MIÉRCOLES: Lazy Loading, Suspense y Performance Architecture
 
-13:30 - 15:00 | Higher-Order Components (HOCs) Advanced Patterns (90 min) Higher-Order Components provide composition-based solutions para cross-cutting concerns como authentication, logging, performance monitoring, y feature flags. While modern React favors hooks para most logic sharing scenarios, HOCs remain valuable para certain architectural patterns, particularly cuando integrating con external libraries o implementing decorator-style functionality. Desarrollo práctico: Implementation de authentication HOC que provides role-based access control, audit logging, y conditional rendering based on user permissions.
+**9:00 - 9:15 | Daily Standup (15 min) Introduction a performance optimization concepts que son fundamentales para scalable React applications.**
 
-15:00 - 15:15 | Descanso (15 min)
+**9:15 - 10:45 | Lazy Loading Fundamentals y React.lazy (90 min)** 
 
-15:15 - 17:00 | Component Composition Architecture (105 min) Effective component composition requires understanding de interface design, prop API planning, y composition strategies que enable flexible usage patterns sin sacrificing developer experience. Pair Programming: Design y implementation de dashboard system que utilizes compound components, render props, y composition patterns para creating flexible layout engine que supports drag-and-drop functionality, responsive behavior, y extensive customization options.
+Performance optimization en React applications modernas requiere strategic lazy loading que balance user experience con resource efficiency. React.lazy provides elegant solutions para component-level code splitting, pero requires understanding de cuándo aplicar esta optimization sin degradar user experience. Analizaremos bundling strategies, chunk size optimization, y loading priority planning que reflejen production application requirements. Práctica guiada: Conversion de movie database hacia lazy-loaded architecture con intelligent preloading strategies.
 
-17:00 - 17:15 | Descanso (15 min)
+**10:45 - 11:00 | Descanso (15 min)**
 
-17:15 - 19:00 | Render Optimization Deep Dive (105 min) Render optimization requires sophisticated understanding de React's reconciliation algorithm, component lifecycle, y re-render triggers. Implementaremos advanced optimization techniques que include bailout strategies, render batching awareness, y strategic component architecture que minimizes unnecessary computation. Implementación práctica: Dashboard optimization workshop donde monitoring render cycles, implementing selective updates, y measuring optimization impact using performance profiling tools.
+**11:00 - 12:30 | Suspense API y Error Boundaries Integration (90 min)** 
 
-19:00 - 20:00 | Advanced Patterns Testing (60 min) Testing advanced component patterns requires specialized approaches que validate behavior sin being tightly coupled to implementation details. Desarrollaremos testing strategies para compound components, render props patterns, y HOCs que ensure functionality correctness mientras maintaining test maintainability através de component evolution.
+Suspense representa un paradigm shift en cómo React maneja asynchronous operations y loading states. Exploraremos Suspense boundaries para graceful loading experiences, error boundaries coordination para robust error handling, y nested Suspense patterns para granular loading control. Understanding estas concepts prepara para concurrent features y advanced performance optimizations. Proyecto práctico: Implementation de loading states sophisticados que provide feedback durante resource loading sin compromising perceived performance.
 
-DÍA 29 - VIERNES: Task Management System - Advanced Architecture Implementation
-9:00 - 9:15 | Daily Standup (15 min) Consolidation day donde all advanced concepts se integran en comprehensive project que simule real-world application complexity.
+**12:30 - 13:30 | Almuerzo (60 min)**
 
-9:15 - 10:45 | Task Management Architecture Planning (90 min) Real-world applications require careful architecture planning que considers scalability, maintainability, performance, y user experience desde el beginning. Realizaremos comprehensive architecture session donde teams design task management system que incorporates context-based state management, complex routing structures, lazy loading strategies, y advanced component patterns. This planning session establece foundation para implementation que reflejará production application standards. Collaborative design: Complete application architecture document creation con component hierarchy, state flow diagrams, y technical decision justifications.
+**13:30 - 15:00 | Performance Profiling y Optimization Strategies (90 min)** 
 
-10:45 - 11:00 | Descanso (15 min)
+Production React applications requieren systematic performance monitoring y optimization. Utilizaremos React DevTools Profiler para identifying performance bottlenecks, analyzing component render cycles, y measuring optimization impact. Estableceremos performance budgets y monitoring strategies que pueden ser applied en production environments. Desarrollo práctico: Performance audit completo de movie database application con identification de optimization opportunities y implementation de solutions.
 
-11:00 - 12:30 | Global State Architecture Implementation (90 min) Implementation de sophisticated state management architecture que combines Context API, useReducer patterns, y performance optimization techniques. The task management system must handle user authentication, project management, task workflows, real-time collaboration features, y complex business logic que simule enterprise application requirements. Pair Programming: Core state management implementation con authentication context, project context, y task context que demonstrate proper separation of concerns y optimized re-render patterns.
+**15:00 - 15:15 | Descanso (15 min)**
 
-12:30 - 13:30 | Almuerzo (60 min)
+**15:15 - 17:00 | Advanced Memoization Techniques (105 min)** 
 
-13:30 - 15:00 | Advanced Routing Implementation (90 min) Complex applications require sophisticated routing that handles nested routes, protected areas, dynamic content loading, y seamless navigation experiences. Implementation de routing architecture para task management que includes dashboard views, project-specific areas, user profile management, admin functionality, y public marketing pages. Desarrollo práctico: Complete routing setup con route guards, lazy loading integration, y URL-based state management que maintains application state através de page refreshes y direct URL access.
+Memoization en React va beyond basic React.memo usage, requiring sophisticated understanding de dependency tracking, comparison functions, y strategic application que no compromise code maintainability. Pair Programming: Implementation de optimization strategies para movie database que incluyan custom comparison functions, selective memoization based on user interaction patterns, y performance monitoring que valide optimization effectiveness.
 
-15:00 - 15:15 | Descanso (15 min)
+**17:00 - 17:15 | Descanso (15 min)**
 
-15:15 - 17:00 | Component Library Integration (105 min) Professional applications leverage reusable component libraries que provide consistency y accelerate development. Pair Programming: Integration de component library developed en previous weeks con task management system, implementing compound components para complex forms, dashboard widgets using advanced patterns, y optimization de component reuse através de application. This integration demonstrates how architectural decisions impact component design y vice versa.
+**17:15 - 19:00 | Bundle Analysis y Code Splitting Strategies (105 min)** 
 
-17:00 - 17:15 | Descanso (15 min)
+Understanding bundle composition es crítico para optimization decisions. Utilizaremos webpack bundle analyzer y otras tools para visualizing código distribution, identifying unused dependencies, y planning code splitting strategies que optimize loading performance. Implementación práctica: Bundle optimization workshop donde cada team analiza su application bundle y implementa targeted optimizations based on actual usage patterns.
 
-17:15 - 19:00 | Performance Optimization Implementation (105 min) Performance optimization debe be considered throughout development process, no como afterthought. Implementation de lazy loading para different application sections, memoization strategies para expensive computations, bundle optimization para production deployment, y performance monitoring que enables continuous optimization. Implementación práctica: Complete performance optimization workshop onde measuring baseline performance, implementing targeted optimizations, y validating improvements using profiling tools.
+**19:00 - 20:00 | Performance Testing y Monitoring (60 min)** 
 
-19:00 - 20:00 | Integration Testing y Quality Assurance (60 min) Complex applications require comprehensive testing strategies que validate not just individual components, but complete user workflows y system integration. Implementation de testing suite que covers authentication flows, task management operations, navigation scenarios, y error handling pathways que ensure application reliability under various conditions.
+Performance testing debe be integrated en development workflow para ensuring optimizations remain effective através de application evolution. Estableceremos automated performance testing usando tools como Lighthouse, implementaremos performance regression detection, y crearemos performance dashboards que pueden monitor application health en production environments.
 
-DÍA 30 - SÁBADO: Project Integration y Semana 5 Assessment
-9:00 - 9:15 | Weekend Integration Standup (15 min) Consolidation y integration day para ensuring all advanced concepts working together cohesively.
+###### DÍA 28 - JUEVES: Advanced Component Patterns y Render Optimization
 
-9:15 - 11:00 | Task Management System - Feature Completion (105 min) Pair Programming intensivo: Final implementation de todas las features planned para task management system. Esta incluye real-time updates simulation, drag-and-drop functionality para task organization, advanced filtering y search capabilities, user collaboration features, y comprehensive error handling que provide graceful degradation cuando services are unavailable. Focus en creating production-ready experience que demonstrates mastery de all concepts learned.
+**9:00 - 9:15 | Daily Standup (15 min) Focus en patterns architecturales avanzados que enable component reusability y maintainability en large codebases.**
 
-11:00 - 11:15 | Descanso (15 min)
+**9:15 - 10:45 | Compound Components Advanced Implementation (90 min)** 
 
-11:15 - 12:45 | Code Review y Architecture Validation (90 min) Comprehensive code review session onde teams examine each other's architectures, providing structured feedback on component design, state management decisions, performance optimization strategies, y code organization. This peer review process simulates real development team practices y helps identify areas para improvement antes de final assessment.
+Compound components enable creation de flexible, reusable UI elements que maintain consistency mientras providing customization flexibility. This pattern es extensively used en design systems y component libraries que must support diverse use cases. Exploraremos implementation techniques que provide type safety, accessibility integration, y flexible composition mientras maintaining simplicity para component consumers. Práctica guiada: Development de complete modal system usando compound pattern que handles focus management, keyboard interactions, y complex content composition.
 
-12:45 - 13:45 | Almuerzo (60 min)
+**10:45 - 11:00 | Descanso (15 min)**
 
-13:45 - 15:30 | Documentation y Deployment Preparation (105 min) Professional applications require comprehensive documentation que enables team onboarding, maintenance, y future development. Creation de technical documentation que includes architecture decisions, component APIs, deployment instructions, y troubleshooting guides. Preparation para deployment incluye environment configuration, build optimization, y production readiness checklist.
+**11:00 - 12:30 | Render Props y Function as Children Patterns (90 min**) 
 
-15:30 - 15:45 | Descanso (15 min)
+Render props y function as children patterns provide powerful abstraction capabilities para sharing stateful logic between components. These patterns enable creation de highly reusable components que can adapt to diverse UI requirements mientras maintaining consistent behavior. Understanding estas techniques es crucial para developing component libraries y design systems que scale across teams y projects. Proyecto práctico: Data fetching component using render props pattern que handles loading states, error conditions, y data transformation mientras providing maximum flexibility para rendering logic.
 
-15:45 - 17:00 | Semana 5 Technical Assessment (75 min) Individual assessment: Advanced React application development bajo tiempo limitado que requires integration de Context API, React Router, performance optimization techniques, y advanced component patterns. Challenge: Implementation de collaborative whiteboard application que demonstrates mastery de all concepts covered en Week 5. Evaluation criteria: Architecture quality, code organization, performance considerations, testing coverage, y user experience design.
+**12:30 - 13:30 | Almuerzo (60 min)**
 
-17:00 - 17:30 | Sprint 2 Retrospective (30 min) Retrospective session para Week 5 onde teams reflect en learning progress, identify most challenging concepts, celebrate achievements, y plan improvements para final week. Discussion de how advanced concepts integrate con foundational knowledge y preparation para ecosystem-level concepts en Week 6.
+**13:30 - 15:00 | Higher-Order Components (HOCs) Advanced Patterns (90 min)** 
 
-SEMANA 6: ECOSISTEMA REACT Y PATTERNS EMPRESARIALES
-DÍA 31 - LUNES: Redux Toolkit y Advanced State Management
-9:00 - 9:15 | Final Week Kickoff (15 min) Introduction al ecosystem nivel professional y preparation para enterprise-level development practices.
+Higher-Order Components provide composition-based solutions para cross-cutting concerns como authentication, logging, performance monitoring, y feature flags. While modern React favors hooks para most logic sharing scenarios, HOCs remain valuable para certain architectural patterns, particularly cuando integrating con external libraries o implementing decorator-style functionality. Desarrollo práctico: Implementation de authentication HOC que provides role-based access control, audit logging, y conditional rendering based on user permissions.
 
-9:15 - 10:45 | Redux Toolkit Fundamentals y Modern Redux (90 min) Redux Toolkit representa evolution de Redux hacia developer experience moderna mientras maintaining predictable state management benefits que make it valuable para large applications. Understanding cuando Redux/RTK es appropriate versus Context API requires analyzing application complexity, team size, debugging requirements, y long-term maintenance considerations. Exploraremos modern Redux patterns que eliminate boilerplate mientras providing powerful debugging capabilities y time-travel features críticas para complex application development. Práctica guiada: Migration de task management system hacia Redux Toolkit architecture, comparing trade-offs y benefits versus Context-based approach.
+**15:00 - 15:15 | Descanso (15 min)**
 
-10:45 - 11:00 | Descanso (15 min)
+**15:15 - 17:00 | Component Composition Architecture (105 min)** 
 
-11:00 - 12:30 | RTK Query y Data Fetching Architecture (90 min) Data fetching en applications modernas requires sophisticated cache management, background updates, optimistic updates, y error handling que goes beyond basic fetch operations. RTK Query provides comprehensive solution para API integration que handles these complexities mientras providing excellent developer experience. Understanding estos concepts prepares para working con APIs complexes en production environments donde data consistency y user experience are critical. Proyecto práctico: Implementation de real-time chat application usando RTK Query para message management, user presence, y optimistic updates.
+Effective component composition requires understanding de interface design, prop API planning, y composition strategies que enable flexible usage patterns sin sacrificing developer experience. Pair Programming: Design y implementation de dashboard system que utilizes compound components, render props, y composition patterns para creating flexible layout engine que supports drag-and-drop functionality, responsive behavior, y extensive customization options.
 
-12:30 - 13:30 | Almuerzo (60 min)
+**17:00 - 17:15 | Descanso (15 min)**
 
-13:30 - 15:00 | Middleware y Advanced Redux Patterns (90 min) Redux middleware enable powerful capabilities como async action handling, logging, crash reporting, y business logic centralization. Understanding middleware concepts provides foundation para implementing custom business logic, integrating con external services, y creating debugging tools que enhance development productivity. Desarrollo práctico: Custom middleware implementation para audit logging, error reporting, y performance monitoring que can be applied en production environments.
+**17:15 - 19:00 | Render Optimization Deep Dive (105 min)** 
 
-15:00 - 15:15 | Descanso (15 min)
+Render optimization requires sophisticated understanding de React's reconciliation algorithm, component lifecycle, y re-render triggers. Implementaremos advanced optimization techniques que include bailout strategies, render batching awareness, y strategic component architecture que minimizes unnecessary computation. Implementación práctica: Dashboard optimization workshop donde monitoring render cycles, implementing selective updates, y measuring optimization impact using performance profiling tools.
 
-15:15 - 17:00 | WebSocket Integration y Real-time Features (105 min) Modern applications increasingly require real-time capabilities que provide immediate feedback y collaborative experiences. Pair Programming: Integration de WebSocket communication con Redux state management para creating chat application que handles connection management, message queuing durante disconnections, y real-time user presence indicators. This implementation demonstrates how external data sources integrate con Redux architecture.
+**19:00 - 20:00 | Advanced Patterns Testing (60 min)** 
 
-17:00 - 17:15 | Descanso (15 min)
+Testing advanced component patterns requires specialized approaches que validate behavior sin being tightly coupled to implementation details. Desarrollaremos testing strategies para compound components, render props patterns, y HOCs que ensure functionality correctness mientras maintaining test maintainability através de component evolution.
 
-17:15 - 19:00 | State Normalization y Complex Data Management (105 min) Enterprise applications often handle complex, nested data structures que require careful normalization para efficient updates y consistent UI state. Implementation de normalized state patterns que handle relational data, prevent unnecessary re-renders, y maintain data consistency across complex user interactions. Implementación práctica: Chat application data architecture que handles users, rooms, messages, y permissions using normalized Redux state structure.
+###### DÍA 29 - VIERNES: Task Management System - Advanced Architecture Implementation
 
-19:00 - 20:00 | Redux DevTools y Debugging Workflows (60 min) Redux provides powerful debugging capabilities que enable time-travel debugging, action replay, y state inspection que are invaluable para complex application development. Establishing debugging workflows que leverage these tools effectively puede dramatically improve development productivity y application reliability.
+**9:00 - 9:15 | Daily Standup (15 min) Consolidation day donde all advanced concepts se integran en comprehensive project que simule real-world application complexity.**
 
-DÍA 32 - MARTES: React Hook Form y Advanced Form Management
-9:00 - 9:15 | Daily Standup (15 min) Focus en form management sophisticado que handles complex business requirements y user experience expectations.
+**9:15 - 10:45 | Task Management Architecture Planning (90 min)** 
 
-9:15 - 10:45 | React Hook Form Architecture y Performance (90 min) Form management en applications modernas requires balancing user experience, validation complexity, y performance considerations. React Hook Form provides performance-optimized solution que minimizes re-renders mientras providing flexible validation y submission handling. Understanding cuando usar RHF versus controlled components requires analyzing form complexity, validation requirements, y performance constraints. Práctica guiada: Implementation de multi-step registration form con complex validation rules, conditional fields, y optimistic validation feedback.
+Real-world applications require careful architecture planning que considers scalability, maintainability, performance, y user experience desde el beginning. Realizaremos comprehensive architecture session donde teams design task management system que incorporates context-based state management, complex routing structures, lazy loading strategies, y advanced component patterns. This planning session establece foundation para implementation que reflejará production application standards. Collaborative design: Complete application architecture document creation con component hierarchy, state flow diagrams, y technical decision justifications.
 
-10:45 - 11:00 | Descanso (15 min)
+**10:45 - 11:00 | Descanso (15 min)**
 
-11:00 - 12:30 | Advanced Validation Patterns y Schema Integration (90 min) Production forms require sophisticated validation que goes beyond simple field validation para include cross-field dependencies, async validation, business rule enforcement, y server-side validation integration. Integration con schema validation libraries como Zod o Yup provides type-safe validation que can be shared between client y server. Proyecto práctico: User profile management system con complex validation rules, file upload handling, y real-time validation feedback que simulates enterprise application requirements.
+**11:00 - 12:30 | Global State Architecture Implementation (90 min)** 
 
-12:30 - 13:30 | Almuerzo (60 min)
+Implementation de sophisticated state management architecture que combines Context API, useReducer patterns, y performance optimization techniques. The task management system must handle user authentication, project management, task workflows, real-time collaboration features, y complex business logic que simule enterprise application requirements. Pair Programming: Core state management implementation con authentication context, project context, y task context que demonstrate proper separation of concerns y optimized re-render patterns.
 
-13:30 - 15:00 | Dynamic Forms y Configuration-driven UI (90 min) Enterprise applications often require forms que can be configured dynamically based on user roles, business requirements, o external configuration. Implementation de form systems que can render different field types, validation rules, y layouts based on configuration objects enables flexible applications que can adapt sin code changes. Desarrollo práctico: Dynamic form generator que renders forms based on JSON configuration, supporting various field types, conditional logic, y custom validation rules.
+**12:30 - 13:30 | Almuerzo (60 min)**
 
-15:00 - 15:15 | Descanso (15 min)
+**13:30 - 15:00 | Advanced Routing Implementation (90 min)** 
 
-15:15 - 17:00 | Form State Persistence y Draft Management (105 min) User experience considerations require forms que preserve user input during navigation, handle auto-save functionality, y provide draft management capabilities. Pair Programming: Implementation de form system que integrates con Redux para global state management, provides auto-save capabilities, y handles form recovery después de page refreshes o accidental navigation.
+Complex applications require sophisticated routing that handles nested routes, protected areas, dynamic content loading, y seamless navigation experiences. Implementation de routing architecture para task management que includes dashboard views, project-specific areas, user profile management, admin functionality, y public marketing pages. Desarrollo práctico: Complete routing setup con route guards, lazy loading integration, y URL-based state management que maintains application state através de page refreshes y direct URL access.
 
-17:00 - 17:15 | Descanso (15 min)
+**15:00 - 15:15 | Descanso (15 min)**
 
-17:15 - 19:00 | File Upload y Media Management (105 min) Modern applications require sophisticated file handling que includes drag-and-drop upload, progress indication, file validation, image resizing, y cloud storage integration. Implementación práctica: Media upload system que handles multiple file types, provides upload progress feedback, integrates con cloud storage simulation, y includes file management capabilities que are common en content management systems.
+**15:15 - 17:00 | Component Library Integration (105 min)** 
 
-19:00 - 20:00 | Form Testing Strategies (60 min) Testing complex forms requires approaches que validate user interactions, validation logic, submission handling, y error scenarios. Implementation de comprehensive testing strategies que cover user workflows, edge cases, y accessibility requirements ensures form reliability en production environments.
+Professional applications leverage reusable component libraries que provide consistency y accelerate development. Pair Programming: Integration de component library developed en previous weeks con task management system, implementing compound components para complex forms, dashboard widgets using advanced patterns, y optimization de component reuse através de application. This integration demonstrates how architectural decisions impact component design y vice versa.
 
-DÍA 33 - MIÉRCOLES: React Testing Library Mastery y Testing Architecture
-9:00 - 9:15 | Daily Standup (15 min) Deep dive en testing strategies que ensure application reliability y maintainability.
+**17:00 - 17:15 | Descanso (15 min)**
 
-9:15 - 10:45 | React Testing Library Philosophy y Best Practices (90 min) Testing React applications effectively requires understanding testing philosophy que focuses en user behavior rather than implementation details. React Testing Library encourages testing approaches que are more maintainable, provide better confidence, y align con how users actually interact con applications. This philosophy shift desde testing implementation details hacia testing user outcomes results en more valuable tests que survive refactoring y provide genuine confidence en application behavior. Práctica guiada: Comprehensive testing approach para chat application, focusing en user interactions, accessibility, y real-world usage scenarios.
+**17:15 - 19:00 | Performance Optimization Implementation (105 min)** 
 
-10:45 - 11:00 | Descanso (15 min)
+Performance optimization debe be considered throughout development process, no como afterthought. Implementation de lazy loading para different application sections, memoization strategies para expensive computations, bundle optimization para production deployment, y performance monitoring que enables continuous optimization. Implementación práctica: Complete performance optimization workshop onde measuring baseline performance, implementing targeted optimizations, y validating improvements using profiling tools.
 
-11:00 - 12:30 | Integration Testing y User Journey Validation (90 min) Integration testing validates que different parts de application work together correctly, catching issues que unit tests might miss. These tests are particularly valuable para validating complex workflows, state management integration, y user journeys que span multiple components. Understanding how to structure integration tests que are reliable, maintainable, y provide meaningful feedback cuando they fail es crucial para maintaining application quality. Proyecto práctico: End-to-end user journey testing para task management system, validating complete workflows desde authentication through task completion.
+**19:00 - 20:00 | Integration Testing y Quality Assurance (60 min)** 
 
-12:30 - 13:30 | Almuerzo (60 min)
+Complex applications require comprehensive testing strategies que validate not just individual components, but complete user workflows y system integration. Implementation de testing suite que covers authentication flows, task management operations, navigation scenarios, y error handling pathways que ensure application reliability under various conditions.
 
-13:30 - 15:00 | Mocking Strategies y External Dependencies (90 min) Testing applications con external dependencies requires sophisticated mocking strategies que isolate units under test mientras simulating realistic external behavior. Effective mocking enables fast, reliable tests que don't depend en external services pero still validate integration logic correctly. Desarrollo práctico: Mocking implementation para API calls, WebSocket connections, local storage, y third-party libraries que allows comprehensive testing sin external dependencies.
+###### DÍA 30 - SÁBADO: Project Integration y Semana 5 Assessment
 
-15:00 - 15:15 | Descanso (15 min)
+**9:00 - 9:15 | Weekend Integration Standup (15 min) Consolidation y integration day para ensuring all advanced concepts working together cohesively.**
 
-15:15 - 17:00 | Performance Testing y Accessibility Automation (105 min) Pair Programming: Modern testing strategies must include performance regression testing y accessibility validation que can be automated to catch issues before they reach production. Implementation de automated testing que validates performance metrics, accessibility standards compliance, y visual regression que ensures consistent user experience across different environments y devices.
+**9:15 - 11:00 | Task Management System - Feature Completion (105 min)** 
 
-17:00 - 17:15 | Descanso (15 min)
+Pair Programming intensivo: Final implementation de todas las features planned para task management system. Esta incluye real-time updates simulation, drag-and-drop functionality para task organization, advanced filtering y search capabilities, user collaboration features, y comprehensive error handling que provide graceful degradation cuando services are unavailable. Focus en creating production-ready experience que demonstrates mastery de all concepts learned.
 
-17:15 - 19:00 | Test Architecture y Maintenance Strategies (105 min) Test suites para large applications require architectural planning que ensures tests remain maintainable, fast, y reliable as applications evolve. Implementación práctica: Test architecture design que includes test utilities, custom matchers, setup configurations, y organizational strategies que scale con application growth whilst maintaining developer productivity.
+**11:00 - 11:15 | Descanso (15 min)**
 
-19:00 - 20:00 | Continuous Integration y Testing Workflows (60 min) Integration de testing en development workflows requires automated testing pipelines que provide fast feedback y prevent regressions. Setup de CI/CD workflows que run tests effectively, provide meaningful feedback quando tests fail, y integrate con development practices para maintaining code quality.
+**11:15 - 12:45 | Code Review y Architecture Validation (90 min)** 
 
-DÍA 34 - JUEVES: Production Deployment y DevOps Integration
-9:00 - 9:15 | Daily Standup (15 min) Focus en production readiness y deployment strategies para React applications.
+Comprehensive code review session onde teams examine each other's architectures, providing structured feedback on component design, state management decisions, performance optimization strategies, y code organization. This peer review process simulates real development team practices y helps identify areas para improvement antes de final assessment.
 
-9:15 - 10:45 | Build Optimization y Production Configuration (90 min) Production deployment requires sophisticated build optimization que balances performance, caching strategies, y deployment flexibility. Understanding webpack configuration, environment variables management, y build pipeline optimization enables creation de deployments que are fast, reliable, y maintainable. Modern deployment practices also require understanding de containerization, environment consistency, y deployment rollback strategies. Práctica guiada: Complete build configuration para task management system con environment-specific optimizations, security hardening, y performance monitoring integration.
+**12:45 - 13:45 | Almuerzo (60 min)**
 
-10:45 - 11:00 | Descanso (15 min)
+**13:45 - 15:30 | Documentation y Deployment Preparation (105 min)** 
 
-11:00 - 12:30 | Docker Containerization y Container Orchestration (90 min) Containerization provides consistent deployment environments que eliminate "works on my machine" issues mientras enabling scalable deployment strategies. Docker integration para React applications requires understanding multi-stage builds, security considerations, y optimization techniques que minimize container size mientras maintaining functionality. Proyecto práctico: Complete Docker setup para chat application con multi-stage builds, security scanning, y deployment automation que simulates production environment requirements.
+Professional applications require comprehensive documentation que enables team onboarding, maintenance, y future development. Creation de technical documentation que includes architecture decisions, component APIs, deployment instructions, y troubleshooting guides. Preparation para deployment incluye environment configuration, build optimization, y production readiness checklist.
 
-12:30 - 13:30 | Almuerzo (60 min)
+**15:30 - 15:45 | Descanso (15 min)**
 
-13:30 - 15:00 | CI/CD Pipeline Implementation (90 min) Continuous integration y deployment pipelines enable automated testing, building, y deployment que improves code quality whilst reducing manual errors. Implementation de GitHub Actions workflows que handle testing, building, security scanning, y deployment automation provides foundation para professional development practices. Desarrollo práctico: Complete CI/CD pipeline setup que includes automated testing, build optimization, security validation, y deployment to production environment.
+**15:45 - 17:00 | Semana 5 Technical Assessment (75 min)** 
 
-15:00 - 15:15 | Descanso (15 min)
+Individual assessment: Advanced React application development bajo tiempo limitado que requires integration de Context API, React Router, performance optimization techniques, y advanced component patterns. Challenge: Implementation de collaborative whiteboard application que demonstrates mastery de all concepts covered en Week 5. Evaluation criteria: Architecture quality, code organization, performance considerations, testing coverage, y user experience design.
 
-15:15 - 17:00 | Monitoring y Error Tracking Integration (105 min) Production applications require comprehensive monitoring que provides visibility into application performance, user behavior, y error conditions. Pair Programming: Integration de monitoring solutions que track application performance, user interactions, y error conditions, providing dashboards y alerts que enable proactive issue resolution before users are significantly impacted.
+**17:00 - 17:30 | Sprint 2 Retrospective (30 min)** 
 
-17:00 - 17:15 | Descanso (15 min)
+Retrospective session para Week 5 onde teams reflect en learning progress, identify most challenging concepts, celebrate achievements, y plan improvements para final week. Discussion de how advanced concepts integrate con foundational knowledge y preparation para ecosystem-level concepts en Week 6.
 
-17:15 - 19:00 | Security Implementation y Best Practices (105 min) Security considerations para React applications include authentication implementation, authorization enforcement, secure communication, y protection against common vulnerabilities. Implementación práctica: Security hardening para task management system que includes authentication tokens management, HTTPS enforcement, content security policy implementation, y protection against XSS y CSRF attacks.
+### SEMANA 6: ECOSISTEMA REACT Y PATTERNS EMPRESARIALES
 
-19:00 - 20:00 | Performance Monitoring y Optimization (60 min) Production performance monitoring requires tools y strategies que provide visibility into real user experiences, enabling data-driven optimization decisions. Implementation de performance monitoring que tracks core web vitals, user interaction metrics, y application-specific performance indicators.
+###### DÍA 31 - LUNES: Redux Toolkit y Advanced State Management
 
-DÍA 35 - VIERNES: Advanced Architecture Patterns y Micro-frontends Preview
-9:00 - 9:15 | Daily Standup (15 min) Exploration de architectural patterns que enable scaling React applications en large organizations.
+**9:00 - 9:15 | Final Week Kickoff (15 min) Introduction al ecosystem nivel professional y preparation para enterprise-level development practices.**
 
-9:15 - 10:45 | Micro-frontend Architecture Concepts (90 min) Micro-frontend architecture enables large organizations para scaling front-end development através de autonomous teams whilst maintaining consistent user experiences. Understanding cuando micro-frontends provide value versus adding unnecessary complexity requires analyzing team structure, application domains, y deployment requirements. These architectural decisions have long-term implications para code sharing, consistency, y maintenance overhead. Práctica guiada: Architectural analysis de when micro-frontend patterns are appropriate, designing module boundaries, y communication strategies between micro-frontends.
+**9:15 - 10:45 | Redux Toolkit Fundamentals y Modern Redux (90 min)** Redux Toolkit representa evolution de Redux hacia developer experience moderna mientras maintaining predictable state management benefits que make it valuable para large applications. Understanding cuando Redux/RTK es appropriate versus Context API requires analyzing application complexity, team size, debugging requirements, y long-term maintenance considerations. Exploraremos modern Redux patterns que eliminate boilerplate mientras providing powerful debugging capabilities y time-travel features críticas para complex application development. Práctica guiada: Migration de task management system hacia Redux Toolkit architecture, comparing trade-offs y benefits versus Context-based approach.
 
-10:45 - 11:00 | Descanso (15 min)
+**10:45 - 11:00 | Descanso (15 min)**
 
-11:00 - 12:30 | Module Federation y Code Sharing Strategies (90 min) Module federation enables sharing code y components across separate applications whilst maintaining deployment independence. This technology enables sophisticated architectural patterns que can improve development velocity para large teams whilst introducing complexity que must be managed carefully. Proyecto práctico: Implementation de shared component library que can be consumed by multiple applications, demonstrating federation concepts y deployment independence.
+**11:00 - 12:30 | RTK Query y Data Fetching Architecture (90 min)** 
 
-12:30 - 13:30 | Almuerzo (60 min)
+Data fetching en applications modernas requires sophisticated cache management, background updates, optimistic updates, y error handling que goes beyond basic fetch operations. RTK Query provides comprehensive solution para API integration que handles these complexities mientras providing excellent developer experience. Understanding estos concepts prepares para working con APIs complexes en production environments donde data consistency y user experience are critical. Proyecto práctico: Implementation de real-time chat application usando RTK Query para message management, user presence, y optimistic updates.
 
-13:30 - 15:00 | Design Systems y Component Library Architecture (90 min) Design systems provide consistency across applications whilst enabling teams para work independently. Implementation de design systems requires careful planning de component APIs, theming strategies, y distribution mechanisms que scale across teams y applications. Desarrollo práctico: Design system implementation que includes component library, design tokens, documentation, y distribution strategy que can support multiple applications.
+**12:30 - 13:30 | Almuerzo (60 min)**
 
-15:00 - 15:15 | Descanso (15 min)
+**13:30 - 15:00 | Middleware y Advanced Redux Patterns (90 min)** 
 
-15:15 - 17:00 | Advanced State Management Architecture (105 min) Pair Programming: Complex applications often require state management strategies que go beyond single-application state management para include cross-application communication, shared state, y distributed state synchronization. Implementation de state management architecture que can handle complex scenarios whilst maintaining predictability y debuggability.
+Redux middleware enable powerful capabilities como async action handling, logging, crash reporting, y business logic centralization. Understanding middleware concepts provides foundation para implementing custom business logic, integrating con external services, y creating debugging tools que enhance development productivity. Desarrollo práctico: Custom middleware implementation para audit logging, error reporting, y performance monitoring que can be applied en production environments.
 
-17:00 - 17:15 | Descanso (15 min)
+**15:00 - 15:15 | Descanso (15 min)**
 
-17:15 - 19:00 | Enterprise Integration Patterns (105 min) Enterprise applications require integration con existing systems, legacy applications, y external services que may not follow modern patterns. Implementación práctica: Integration strategies que enable React applications para work alongside existing enterprise systems, handling authentication integration, data synchronization, y legacy system communication.
+**15:15 - 17:00 | WebSocket Integration y Real-time Features (105 min)** 
 
-19:00 - 20:00 | Architecture Documentation y Knowledge Transfer (60 min) Complex architectures require comprehensive documentation que enables team onboarding, decision understanding, y future evolution. Creation de architectural documentation que captures decisions, trade-offs, y evolution plans para complex React applications.
+Modern applications increasingly require real-time capabilities que provide immediate feedback y collaborative experiences. Pair Programming: Integration de WebSocket communication con Redux state management para creating chat application que handles connection management, message queuing durante disconnections, y real-time user presence indicators. This implementation demonstrates how external data sources integrate con Redux architecture.
 
-DÍA 36 - SÁBADO: Capstone Project y Final Assessment
-9:00 - 9:15 | Capstone Project Kickoff (15 min) Final project que integrates all concepts learned throughout bootcamp, simulating real-world application development.
+**17:00 - 17:15 | Descanso (15 min)**
 
-9:15 - 11:00 | Capstone Planning y Architecture Design (105 min) Collaborative architecture session: Teams design comprehensive application que demonstrates mastery de all concepts learned durante bootcamp. This includes state management strategy selection, routing architecture, performance optimization planning, testing strategy, y deployment pipeline design. Project selection: E-commerce platform, project management system, social media application, o collaborative tool que requires integration de multiple complex features.
+**17:15 - 19:00 | State Normalization y Complex Data Management (105 min)** 
 
-11:00 - 11:15 | Descanso (15 min)
+Enterprise applications often handle complex, nested data structures que require careful normalization para efficient updates y consistent UI state. Implementation de normalized state patterns que handle relational data, prevent unnecessary re-renders, y maintain data consistency across complex user interactions. Implementación práctica: Chat application data architecture que handles users, rooms, messages, y permissions using normalized Redux state structure.
 
-11:15 - 12:45 | Development Sprint 1 - Foundation Implementation (90 min) Pair Programming intensivo: Implementation de application foundation including state management setup, routing configuration, authentication integration, y core component architecture. Focus en establishing solid foundation que enables rapid feature development whilst maintaining code quality y performance standards.
+**19:00 - 20:00 | Redux DevTools y Debugging Workflows (60 min)** 
 
-12:45 - 13:45 | Almuerzo (60 min)
+Redux provides powerful debugging capabilities que enable time-travel debugging, action replay, y state inspection que are invaluable para complex application development. Establishing debugging workflows que leverage these tools effectively puede dramatically improve development productivity y application reliability.
 
-13:45 - 15:30 | Development Sprint 2 - Feature Implementation (105 min) Continuación desarrollo: Advanced feature implementation que demonstrates integration de Context API, Redux Toolkit, React Router, performance optimization, testing strategies, y deployment preparation. Features should showcase sophisticated state management, complex user interactions, y professional-level user experience.
+###### DÍA 32 - MARTES: React Hook Form y Advanced Form Management
 
-15:30 - 15:45 | Descanso (15 min)
+**9:00 - 9:15 | Daily Standup (15 min) Focus en form management sophisticado que handles complex business requirements y user experience expectations.**
 
-15:45 - 17:00 | Final Integration y Quality Assurance (75 min) Comprehensive testing, performance validation, accessibility audit, y production readiness verification. Implementation de monitoring, error tracking, y deployment pipeline que demonstrates understanding de production application requirements.
+**9:15 - 10:45 | React Hook Form Architecture y Performance (90 min)** 
 
-17:00 - 17:30 | Final Assessment y Portfolio Presentation (30 min) Individual assessment: Comprehensive evaluation de all concepts covered durante bootcamp. Portfolio presentation: Teams present capstone projects, explaining architectural decisions, technical challenges overcome, y lessons learned durante development process. Evaluation criteria: Technical mastery, code quality, user experience design, testing coverage, deployment readiness, y ability para articulate technical decisions.
+Form management en applications modernas requires balancing user experience, validation complexity, y performance considerations. React Hook Form provides performance-optimized solution que minimizes re-renders mientras providing flexible validation y submission handling. Understanding cuando usar RHF versus controlled components requires analyzing form complexity, validation requirements, y performance constraints. Práctica guiada: Implementation de multi-step registration form con complex validation rules, conditional fields, y optimistic validation feedback.
 
-CRITERIOS DE EVALUACIÓN Y MÉTRICAS DE ÉXITO - FASE 3
-Mastery de Conceptos Arquitecturales (40%)
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Advanced Validation Patterns y Schema Integration (90 min)** 
+
+Production forms require sophisticated validation que goes beyond simple field validation para include cross-field dependencies, async validation, business rule enforcement, y server-side validation integration. Integration con schema validation libraries como Zod o Yup provides type-safe validation que can be shared between client y server. Proyecto práctico: User profile management system con complex validation rules, file upload handling, y real-time validation feedback que simulates enterprise application requirements.
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Dynamic Forms y Configuration-driven UI (90 min)** 
+
+Enterprise applications often require forms que can be configured dynamically based on user roles, business requirements, o external configuration. Implementation de form systems que can render different field types, validation rules, y layouts based on configuration objects enables flexible applications que can adapt sin code changes. Desarrollo práctico: Dynamic form generator que renders forms based on JSON configuration, supporting various field types, conditional logic, y custom validation rules.
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Form State Persistence y Draft Management (105 min)** 
+
+User experience considerations require forms que preserve user input during navigation, handle auto-save functionality, y provide draft management capabilities. Pair Programming: Implementation de form system que integrates con Redux para global state management, provides auto-save capabilities, y handles form recovery después de page refreshes o accidental navigation.
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | File Upload y Media Management (105 min)** 
+
+Modern applications require sophisticated file handling que includes drag-and-drop upload, progress indication, file validation, image resizing, y cloud storage integration. Implementación práctica: Media upload system que handles multiple file types, provides upload progress feedback, integrates con cloud storage simulation, y includes file management capabilities que are common en content management systems.
+
+**19:00 - 20:00 | Form Testing Strategies (60 min)** 
+
+Testing complex forms requires approaches que validate user interactions, validation logic, submission handling, y error scenarios. Implementation de comprehensive testing strategies que cover user workflows, edge cases, y accessibility requirements ensures form reliability en production environments.
+
+###### DÍA 33 - MIÉRCOLES: React Testing Library Mastery y Testing Architecture
+
+**9:00 - 9:15 | Daily Standup (15 min) Deep dive en testing strategies que ensure application reliability y maintainability.**
+
+**9:15 - 10:45 | React Testing Library Philosophy y Best Practices (90 min)** 
+
+Testing React applications effectively requires understanding testing philosophy que focuses en user behavior rather than implementation details. React Testing Library encourages testing approaches que are more maintainable, provide better confidence, y align con how users actually interact con applications. This philosophy shift desde testing implementation details hacia testing user outcomes results en more valuable tests que survive refactoring y provide genuine confidence en application behavior. Práctica guiada: Comprehensive testing approach para chat application, focusing en user interactions, accessibility, y real-world usage scenarios.
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Integration Testing y User Journey Validation (90 min)** 
+
+Integration testing validates que different parts de application work together correctly, catching issues que unit tests might miss. These tests are particularly valuable para validating complex workflows, state management integration, y user journeys que span multiple components. Understanding how to structure integration tests que are reliable, maintainable, y provide meaningful feedback cuando they fail es crucial para maintaining application quality. Proyecto práctico: End-to-end user journey testing para task management system, validating complete workflows desde authentication through task completion.
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Mocking Strategies y External Dependencies (90 min)** 
+
+Testing applications con external dependencies requires sophisticated mocking strategies que isolate units under test mientras simulating realistic external behavior. Effective mocking enables fast, reliable tests que don't depend en external services pero still validate integration logic correctly. Desarrollo práctico: Mocking implementation para API calls, WebSocket connections, local storage, y third-party libraries que allows comprehensive testing sin external dependencies.
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Performance Testing y Accessibility Automation (105 min)** 
+
+Pair Programming: Modern testing strategies must include performance regression testing y accessibility validation que can be automated to catch issues before they reach production. Implementation de automated testing que validates performance metrics, accessibility standards compliance, y visual regression que ensures consistent user experience across different environments y devices.
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Test Architecture y Maintenance Strategies (105 min)** 
+
+Test suites para large applications require architectural planning que ensures tests remain maintainable, fast, y reliable as applications evolve. Implementación práctica: Test architecture design que includes test utilities, custom matchers, setup configurations, y organizational strategies que scale con application growth whilst maintaining developer productivity.
+
+**19:00 - 20:00 | Continuous Integration y Testing Workflows (60 min)** 
+
+Integration de testing en development workflows requires automated testing pipelines que provide fast feedback y prevent regressions. Setup de CI/CD workflows que run tests effectively, provide meaningful feedback quando tests fail, y integrate con development practices para maintaining code quality.
+
+###### DÍA 34 - JUEVES: Production Deployment y DevOps Integration
+
+**9:00 - 9:15 | Daily Standup (15 min) Focus en production readiness y deployment strategies para React applications.**
+
+**9:15 - 10:45 | Build Optimization y Production Configuration (90 min)** 
+
+Production deployment requires sophisticated build optimization que balances performance, caching strategies, y deployment flexibility. Understanding webpack configuration, environment variables management, y build pipeline optimization enables creation de deployments que are fast, reliable, y maintainable. Modern deployment practices also require understanding de containerization, environment consistency, y deployment rollback strategies. Práctica guiada: Complete build configuration para task management system con environment-specific optimizations, security hardening, y performance monitoring integration.
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Docker Containerization y Container Orchestration (90 min)** 
+
+Containerization provides consistent deployment environments que eliminate "works on my machine" issues mientras enabling scalable deployment strategies. Docker integration para React applications requires understanding multi-stage builds, security considerations, y optimization techniques que minimize container size mientras maintaining functionality. Proyecto práctico: Complete Docker setup para chat application con multi-stage builds, security scanning, y deployment automation que simulates production environment requirements.
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | CI/CD Pipeline Implementation (90 min)** 
+
+Continuous integration y deployment pipelines enable automated testing, building, y deployment que improves code quality whilst reducing manual errors. Implementation de GitHub Actions workflows que handle testing, building, security scanning, y deployment automation provides foundation para professional development practices. Desarrollo práctico: Complete CI/CD pipeline setup que includes automated testing, build optimization, security validation, y deployment to production environment.
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Monitoring y Error Tracking Integration (105 min)** 
+
+Production applications require comprehensive monitoring que provides visibility into application performance, user behavior, y error conditions. Pair Programming: Integration de monitoring solutions que track application performance, user interactions, y error conditions, providing dashboards y alerts que enable proactive issue resolution before users are significantly impacted.
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Security Implementation y Best Practices (105 min)** 
+
+Security considerations para React applications include authentication implementation, authorization enforcement, secure communication, y protection against common vulnerabilities. Implementación práctica: Security hardening para task management system que includes authentication tokens management, HTTPS enforcement, content security policy implementation, y protection against XSS y CSRF attacks.
+
+**19:00 - 20:00 | Performance Monitoring y Optimization (60 min)** 
+
+Production performance monitoring requires tools y strategies que provide visibility into real user experiences, enabling data-driven optimization decisions. Implementation de performance monitoring que tracks core web vitals, user interaction metrics, y application-specific performance indicators.
+
+###### DÍA 35 - VIERNES: Advanced Architecture Patterns y Micro-frontends Preview
+
+**9:00 - 9:15 | Daily Standup (15 min) Exploration de architectural patterns que enable scaling React applications en large organizations.**
+
+**9:15 - 10:45 | Micro-frontend Architecture Concepts (90 min)** 
+
+Micro-frontend architecture enables large organizations para scaling front-end development através de autonomous teams whilst maintaining consistent user experiences. Understanding cuando micro-frontends provide value versus adding unnecessary complexity requires analyzing team structure, application domains, y deployment requirements. These architectural decisions have long-term implications para code sharing, consistency, y maintenance overhead. Práctica guiada: Architectural analysis de when micro-frontend patterns are appropriate, designing module boundaries, y communication strategies between micro-frontends.
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Module Federation y Code Sharing Strategies (90 min)** 
+
+Module federation enables sharing code y components across separate applications whilst maintaining deployment independence. This technology enables sophisticated architectural patterns que can improve development velocity para large teams whilst introducing complexity que must be managed carefully. Proyecto práctico: Implementation de shared component library que can be consumed by multiple applications, demonstrating federation concepts y deployment independence.
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Design Systems y Component Library Architecture (90 min)** 
+
+Design systems provide consistency across applications whilst enabling teams para work independently. Implementation de design systems requires careful planning de component APIs, theming strategies, y distribution mechanisms que scale across teams y applications. Desarrollo práctico: Design system implementation que includes component library, design tokens, documentation, y distribution strategy que can support multiple applications.
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Advanced State Management Architecture (105 min)** 
+
+Pair Programming: Complex applications often require state management strategies que go beyond single-application state management para include cross-application communication, shared state, y distributed state synchronization. Implementation de state management architecture que can handle complex scenarios whilst maintaining predictability y debuggability.
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Enterprise Integration Patterns (105 min)** 
+
+Enterprise applications require integration con existing systems, legacy applications, y external services que may not follow modern patterns. Implementación práctica: Integration strategies que enable React applications para work alongside existing enterprise systems, handling authentication integration, data synchronization, y legacy system communication.
+
+**19:00 - 20:00 | Architecture Documentation y Knowledge Transfer (60 min)** 
+
+Complex architectures require comprehensive documentation que enables team onboarding, decision understanding, y future evolution. Creation de architectural documentation que captures decisions, trade-offs, y evolution plans para complex React applications.
+
+###### DÍA 36 - SÁBADO: Capstone Project y Final Assessment
+
+**9:00 - 9:15 | Capstone Project Kickoff (15 min) Final project que integrates all concepts learned throughout bootcamp, simulating real-world application development.**
+
+**9:15 - 11:00 | Capstone Planning y Architecture Design (105 min)** 
+
+Collaborative architecture session: Teams design comprehensive application que demonstrates mastery de all concepts learned durante bootcamp. This includes state management strategy selection, routing architecture, performance optimization planning, testing strategy, y deployment pipeline design. Project selection: E-commerce platform, project management system, social media application, o collaborative tool que requires integration de multiple complex features.
+
+**11:00 - 11:15 | Descanso (15 min)**
+
+**11:15 - 12:45 | Development Sprint 1 - Foundation Implementation (90 min)** 
+
+Pair Programming intensivo: Implementation de application foundation including state management setup, routing configuration, authentication integration, y core component architecture. Focus en establishing solid foundation que enables rapid feature development whilst maintaining code quality y performance standards.
+
+**12:45 - 13:45 | Almuerzo (60 min)**
+
+**13:45 - 15:30 | Development Sprint 2 - Feature Implementation (105 min)** 
+
+Continuación desarrollo: Advanced feature implementation que demonstrates integration de Context API, Redux Toolkit, React Router, performance optimization, testing strategies, y deployment preparation. Features should showcase sophisticated state management, complex user interactions, y professional-level user experience.
+
+**15:30 - 15:45 | Descanso (15 min)**
+
+**15:45 - 17:00 | Final Integration y Quality Assurance (75 min)** 
+
+Comprehensive testing, performance validation, accessibility audit, y production readiness verification. Implementation de monitoring, error tracking, y deployment pipeline que demonstrates understanding de production application requirements.
+
+**17:00 - 17:30 | Final Assessment y Portfolio Presentation (30 min)** 
+
+Individual assessment: Comprehensive evaluation de all concepts covered durante bootcamp. Portfolio presentation: Teams present capstone projects, explaining architectural decisions, technical challenges overcome, y lessons learned durante development process. Evaluation criteria: Technical mastery, code quality, user experience design, testing coverage, deployment readiness, y ability para articulate technical decisions.
+
+***CRITERIOS DE EVALUACIÓN Y MÉTRICAS DE ÉXITO - FASE 3***
+
+*Mastery de Conceptos Arquitecturales (40%)*
+
 Los aprendices deben demostrar understanding profundo de architectural patterns que enable scalable React application development. Context API mastery incluye appropriate usage decisions, performance optimization strategies, y integration con complex application state. React Router competency requires sophisticated routing implementations que handle authentication, authorization, lazy loading, y complex navigation flows. Performance optimization demonstrates understanding de bundling strategies, code splitting, memoization techniques, y monitoring approaches que are applicable en production environments.
 
-Integration de Ecosystem Tools (35%)
+*Integration de Ecosystem Tools (35%)*
+
 Professional React development requires competency con ecosystem tools que extend React capabilities. Redux Toolkit mastery incluye understanding de cuando Redux es appropriate versus simpler state management solutions, implementation de complex business logic using reducers y middleware, y integration con external APIs using RTK Query. React Hook Form competency demonstrates sophisticated form management que handles complex validation, file uploads, y user experience optimization. Testing mastery using React Testing Library shows ability para writing maintainable tests que focus en user behavior rather than implementation details.
 
-Production Readiness y DevOps Understanding (25%)
+*Production Readiness y DevOps Understanding (25%)*
+
 Modern React development requires understanding de deployment, monitoring, y maintenance practices. Docker containerization demonstrates ability para creating consistent deployment environments. CI/CD pipeline implementation shows understanding de automated testing, building, y deployment processes. Security implementation includes authentication, authorization, secure communication, y protection against common vulnerabilities. Performance monitoring integration demonstrates understanding de how para maintaining application quality en production environments.
 
-Competencias Profesionales Demostradas
+*Competencias Profesionales Demostradas*
+
 Para successful completion de Phase 3, los aprendices deben show architectural thinking que considers long-term maintainability, team collaboration, y business requirements. Technical communication skills debe enable clear explanation de complex architectural decisions, trade-offs considered durante development, y rationale behind technology choices. Problem-solving capabilities must demonstrate ability para debugging complex issues, optimizing performance bottlenecks, y integrating diverse technologies effectively. Collaborative development practices should reflect professional team environments con effective code review, documentation, y knowledge sharing.
 
-¿Procedo con el desarrollo detallado de la Fase 4 (Semanas 7-8) enfocada en integración completa, deployment avanzado, y preparación final para competencia WorldSkills? Esta fase final consolidará todos los conceptos mientras simula condiciones reales de competencia y entrega de proyectos enterprise-level.
+---
 
+### FASE 4: INTEGRACIÓN COMPLETA Y PREPARACIÓN WORLDSKILLS
 
-Preparando detalles de la fase 4 del bootcamp
-4s
+*Semanas 7 y 8 - Plan Detallado Día a Día*
 
-
-
-
-
-
-
-
-Reintentar
-ok de acuerdo, procede con la fase 4
-
-Editar
-
-Estructuró fase final de bootcamp para preparación WorldSkills.
-5s
-
-
-
-
-
-
-FASE 4: INTEGRACIÓN COMPLETA Y PREPARACIÓN WORLDSKILLS
-Semanas 7 y 8 - Plan Detallado Día a Día
 Esta fase culminante integra todos los conocimientos adquiridos mientras simula las condiciones reales de competencia WorldSkills. Los aprendices desarrollarán aplicaciones de nivel empresarial bajo presión temporal, demostrando dominio técnico completo y competencias profesionales que reflejen los estándares internacionales de la industria tecnológica.
 
 SEMANA 7: INTEGRACIÓN BACKEND Y DEPLOYMENT ENTERPRISE
