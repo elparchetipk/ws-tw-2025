@@ -741,553 +741,648 @@ Esta segunda fase profundiza en los conceptos fundamentales de React, llevando a
 
 **17:15 - 19:00 | Styling Strategies en React (105 min)**
 
-CSS Modules vs styled-components vs CSS-in-JS: pros, contras y casos de uso
-Theme provider patterns para consistent design systems
-Responsive props y breakpoint management en componentes
-Implementación práctica: Theming completo de component library
-19:00 - 20:00 | Component Testing Introduction (60 min)
-
-React Testing Library setup y philosophy: testing user behavior, no implementation details
-Testing props, rendering, y user interactions básicas
-Snapshot testing para componentes UI: cuándo usar y cuándo evitar
-Práctica: Tests básicos para componentes desarrollados en el día
-DÍA 14 - MARTES: Estado Avanzado y Controlled Components
-9:00 - 9:15 | Daily Standup (15 min) Revisión de component library creada y preparación para conceptos de estado más complejos.
-
-9:15 - 10:45 | Advanced useState Patterns (90 min)
-
-State updates con objetos complejos: inmutabilidad y spreading patterns
-Functional state updates para prevenir stale closures y race conditions
-State normalization: cuándo flatten state vs nested objects
-Práctica intensiva: Todo List con categorías, prioridades y filtering
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | Controlled vs Uncontrolled Components (90 min)
-
-Controlled components: complete control sobre form state y validation
-Uncontrolled components con useRef: cuándo usar para performance
-Mixed approaches: controlled components con uncontrolled optimizations
-Proyecto práctico: Formulario de registro completo con validation en tiempo real
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | Form State Management (90 min)
-
-Custom form hooks para reusabilidad: useForm implementation básica
-Validation strategies: sync vs async validation, server-side integration
-Error handling y user feedback durante form submission
-Desarrollo continuado: Sistema de formularios con múltiples steps
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Event Handling Patterns (105 min)
-
-Event delegation en React: cuándo es necesario y cuándo evitar
-Custom event handlers con callback patterns
-Preventing default behavior y event propagation en SPA context
-Pair Programming: Interactive dashboard con múltiples event types
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | State Synchronization (105 min)
-
-Multiple components sharing state: preliminary patterns antes de context
-Local storage synchronization con useEffect patterns
-State persistence strategies y data hydration
-Implementación práctica: User preferences system con persistence
-19:00 - 20:00 | Performance Considerations (60 min)
-
-Re-render optimization strategies: memo, useMemo, useCallback introduction
-Identifying performance bottlenecks con React DevTools Profiler
-State colocation para performance: mantener state cerca de donde se usa
-Assessment: Performance audit de componentes desarrollados
-DÍA 15 - MIÉRCOLES: Listas, Keys y Renderizado Condicional
-9:00 - 9:15 | Daily Standup (15 min) Enfoque en renderizado dinámico y patrones de listas complejas para interfaces reales.
-
-9:15 - 10:45 | Dynamic Lists y Key Props (90 min)
-
-React keys: por qué son críticas para performance y correctness
-Key selection strategies: index vs unique IDs vs composite keys
-List operations: add, remove, reorder y sus implications para keys
-Práctica guiada: Contact manager con sorting, filtering, y CRUD operations
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | Conditional Rendering Patterns (90 min)
-
-Ternary operators vs logical AND vs early returns: readability y performance
-Component switching patterns para different UI states
-Loading states, error boundaries preview, y empty states handling
-Proyecto práctico: Data table con loading, error, empty, y success states
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | Advanced Filtering y Search (90 min)
-
-Real-time search implementation con debouncing techniques
-Multiple filter criteria y complex filtering logic
-Search highlighting y result ranking básico
-Desarrollo práctico: Product catalog con advanced search y filtering
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Virtualization Concepts (105 min)
-
-Large lists performance: cuándo es necesario virtualizar
-React window/react-virtualized introduction para massive datasets
-Infinite scrolling patterns y pagination strategies
-Pair Programming: Contact list con 10,000+ entries y smooth scrolling
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | List Accessibility (105 min)
-
-ARIA roles para lists: listbox, grid, tree patterns
-Keyboard navigation en lists complejas: arrow keys, home, end
-Screen reader support para dynamic content changes
-Implementación práctica: Fully accessible todo list con keyboard shortcuts
-19:00 - 20:00 | Testing Dynamic Content (60 min)
-
-Testing lists con changing data: async testing patterns
-User interaction testing: clicks, keyboard navigation, search
-Accessibility testing automation con jest-axe
-Práctica: Comprehensive test suite para contact manager
-DÍA 16 - JUEVES: Lifting State Up y Component Communication
-9:00 - 9:15 | Daily Standup (15 min) Preparación para patrones de comunicación entre componentes y arquitectura de estado.
-
-9:15 - 10:45 | Lifting State Up Fundamentals (90 min)
-
-Cuándo mover state hacia arriba: identificando component boundaries
-Common parent patterns y state ownership decisions
-Callback props para comunicación upward: naming conventions y patterns
-Práctica guiada: Shopping cart con product list y cart summary
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | Sibling Component Communication (90 min)
-
-State en common ancestor para sibling communication
-Event-driven communication patterns sin external libraries
-Message passing entre components distantly related
-Proyecto práctico: Multi-step form con navigation y state sharing
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | State Architecture Planning (90 min)
-
-Component tree analysis para optimal state placement
-State normalization strategies para complex applications
-Derived state patterns: computing values from existing state
-Desarrollo práctico: E-commerce product page con complex state interactions
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Shopping Cart Project - Architecture (105 min)
-
-Pair Programming: Shopping cart complete architecture design
-State management planning: products, cart items, user preferences
-Component breakdown y responsibility assignment
-API integration planning para product data y cart persistence
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | Shopping Cart - Implementation Phase 1 (105 min)
-
-Continuación desarrollo: Core components implementation
-Product catalog con filtering y search capabilities
-Add to cart functionality con quantity management
-Real-time cart total calculation y tax computation
-19:00 - 20:00 | Code Review y Architecture Validation (60 min)
-
-Cross-team code reviews: architecture decisions y implementation quality
-State flow validation: ensuring predictable data flow
-Performance considerations review
-Preparation para advanced features tomorrow
-DÍA 17 - VIERNES: Custom Hooks Introduction y Project Integration
-9:00 - 9:15 | Daily Standup (15 min) Introducción a custom hooks como herramienta de reusabilidad y separation of concerns.
-
-9:15 - 10:45 | Custom Hooks Fundamentals (90 min)
-
-Cuándo extraer lógica a custom hooks: identifying reusable patterns
-Hook naming conventions y parameter design
-Stateful logic extraction: useCounter, useToggle, useLocalStorage examples
-Práctica guiada: Implementación de useForm hook para reusabilidad
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | Effect-based Custom Hooks (90 min)
-
-useEffect patterns en custom hooks: cleanup y dependency management
-API integration hooks: useFetch, useAPI patterns
-Subscription hooks para real-time data: useWebSocket preview
-Proyecto práctico: useProducts hook para shopping cart integration
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | Shopping Cart - Advanced Features (90 min)
-
-Pair Programming: Wishlist functionality con custom hooks
-Product comparison feature usando state lifting patterns
-User authentication state management (mock implementation)
-Shopping cart persistence con localStorage integration
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Shopping Cart - Polish y UX (105 min)
-
-Loading states implementation durante API calls
-Error handling y user feedback para all operations
-Responsive design optimization para mobile shopping experience
-Desarrollo continuado: Checkout process con form validation
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | Performance Optimization Workshop (105 min)
-
-React.memo implementation para expensive components
-useMemo y useCallback strategic usage en shopping cart
-Bundle size analysis y code splitting preparation
-Implementación práctica: Performance optimization de shopping cart completo
-19:00 - 20:00 | Testing Custom Hooks (60 min)
-
-Testing isolated custom hooks con @testing-library/react-hooks
-Integration testing para hooks con components
-Mocking external dependencies en custom hooks
-Práctica: Test suite completa para custom hooks desarrollados
-DÍA 18 - SÁBADO: Project Integration y Semana 3 Assessment
-9:00 - 9:15 | Weekend Integration Standup (15 min) Planificación de integration day y preparation para week assessment.
-
-9:15 - 11:00 | Shopping Cart - Final Integration (105 min)
-
-Pair Programming intensivo: Feature completion y bug fixing
-Cross-browser testing y compatibility validation
-Accessibility audit completo y corrections
-Final polish: Animation, transitions, y micro-interactions
-11:00 - 11:15 | Descanso (15 min)
-
-11:15 - 12:45 | Code Review Masterclass (90 min)
-
-Peer code reviews con structured feedback protocols
-Identifying code smells y refactoring opportunities
-Documentation review y README completion
-Git workflow refinement y commit message optimization
-12:45 - 13:45 | Almuerzo (60 min)
-
-13:45 - 15:30 | Portfolio Integration Workshop (105 min)
-
-Shopping cart integration en personal portfolio
-Project documentation y technical decision explanations
-Demo preparation y presentation skills development
-Individual work: Portfolio updates con new React projects
-15:30 - 15:45 | Descanso (15 min)
-
-15:45 - 17:00 | Semana 3 Technical Assessment (75 min)
-
-Individual assessment: React component development bajo tiempo limitado
-Challenge: Implement contact manager con all features learned
-Evaluation criteria: Code quality, functionality, accessibility, testing
-Self-assessment: Reflection sobre learning progress y areas for improvement
-17:00 - 17:30 | Sprint 1 Retrospective (30 min)
-
-Team retrospective: what worked well, what to improve
-Individual learning reflection y goal setting para Semana 4
-Feedback on pair programming effectiveness y collaboration
-Planning: Preparation para React advanced concepts next week
-SEMANA 4: REACT INTERMEDIO Y ADVANCED PATTERNS
-DÍA 19 - LUNES: useEffect Mastery y Side Effects
-9:00 - 9:15 | Week 4 Advanced Standup (15 min) Kick-off para concepts más avanzados y preparation para patterns complejos.
-
-9:15 - 10:45 | useEffect Advanced Patterns (90 min)
-
-Effect timing deep dive: layout effects vs passive effects
-Multiple effects organization y separation of concerns
-Effect dependencies optimization: cuando incluir functions y objects
-Práctica guiada: News dashboard con multiple data sources y real-time updates
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | API Integration Patterns (90 min)
-
-Error boundaries implementation para API error handling
-Loading states management con concurrent requests
-Data caching strategies y cache invalidation
-Proyecto práctico: Multi-source news aggregator con intelligent caching
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | Real-time Data y Subscriptions (90 min)
-
-WebSocket integration patterns en React applications
-Event source y server-sent events para live updates
-Subscription cleanup y memory leak prevention
-Desarrollo práctico: Live sports scores dashboard con WebSocket connection
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Advanced useEffect Cleanup (105 min)
-
-Pair Programming: Cleanup functions para complex subscriptions
-Abort controllers para fetch request cancellation
-Timer management y interval cleanup patterns
-Implementación práctica: Chat application con typing indicators y real-time messaging
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | Effect Dependencies Management (105 min)
-
-useCallback y useMemo strategic implementation
-Custom hooks para effect logic encapsulation
-Effect composition patterns y reusability strategies
-Desarrollo continuado: Optimized news dashboard con minimal re-renders
-19:00 - 20:00 | Side Effects Testing (60 min)
-
-Testing components con useEffect y async operations
-Mocking timers, intervals, y WebSocket connections
-Integration testing para real-time features
-Práctica: Comprehensive testing para news dashboard
-DÍA 20 - MARTES: Component Communication Advanced
-9:00 - 9:15 | Daily Standup (15 min) Focus en patterns de comunicación más sofisticados y state management preparation.
-
-9:15 - 10:45 | Advanced Component Patterns (90 min)
-
-Compound components pattern para complex UI elements
-Render props avanzado y function as children patterns
-Higher-order components (HOCs) implementation y use cases
-Práctica guiada: Accordion component con compound pattern y full accessibility
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | State Management Strategies (90 min)
-
-useReducer introduction para complex state logic
-State machine concepts y finite state patterns
-State normalization para nested data structures
-Proyecto práctico: Task management system con complex workflow states
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | E-commerce Cart - Advanced State (90 min)
-
-Pair Programming: Shopping cart con useReducer implementation
-Inventory management y stock level tracking
-Discount codes y promotional pricing logic
-Desarrollo práctico: Complex pricing calculations con multiple rules
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Cross-Component Communication (105 min)
-
-Event emitter patterns para loosely coupled components
-Custom event dispatching y handling
-State synchronization across component trees
-Implementación práctica: Multi-tab shopping experience con synchronized cart
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | Performance Optimization Deep Dive (105 min)
-
-React.memo strategic implementation y comparison functions
-useMemo y useCallback optimization patterns
-Component splitting strategies para code splitting preparation
-Desarrollo continuado: Performance-optimized e-commerce experience
-19:00 - 20:00 | Advanced Testing Patterns (60 min)
-
-Testing complex component interactions
-Integration testing para state management patterns
-Performance testing y render count validation
-Práctica: Advanced testing suite para task management system
-DÍA 21 - MIÉRCOLES: Context API Preview y Global State
-9:00 - 9:15 | Daily Standup (15 min) Introduction to global state management y Context API fundamentals.
-
-9:15 - 10:45 | Context API Fundamentals (90 min)
-
-Cuándo usar Context vs props drilling: decision framework
-Context creation, provider setup, y consumer patterns
-Context performance implications y optimization strategies
-Práctica guiada: Theme provider implementation con dark/light mode switching
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | useContext Hook Patterns (90 min)
-
-useContext vs Context.Consumer: modern patterns
-Custom context hooks para improved developer experience
-Context composition patterns para multiple contexts
-Proyecto práctico: User authentication context con login/logout functionality
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | Global State Architecture (90 min)
-
-Context + useReducer combination para complex global state
-State slicing y context separation strategies
-Performance optimization con multiple contexts
-Desarrollo práctico: Shopping cart global state con Context API
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Task Management System - Global State (105 min)
-
-Pair Programming: Task management con global state architecture
-User state, project state, y task state separation
-Real-time updates propagation through context
-Implementación práctica: Multi-user task collaboration simulation
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | Context Performance Optimization (105 min)
-
-Context value memoization patterns
-Preventing unnecessary re-renders en context consumers
-Context splitting strategies para performance
-Desarrollo continuado: Optimized task management con minimal re-renders
-19:00 - 20:00 | Global State Testing (60 min)
-
-Testing context providers y consumers
-Integration testing para global state changes
-Mocking context values para isolated testing
-Práctica: Test suite para task management global state
-DÍA 22 - JUEVES: Advanced Hooks y Composition Patterns
-9:00 - 9:15 | Daily Standup (15 min) Advanced hooks exploration y complex composition patterns.
-
-9:15 - 10:45 | useReducer Advanced Patterns (90 min)
-
-Complex reducer logic y action pattern design
-Reducer composition y state machine implementation
-useReducer vs useState: decision criteria y migration strategies
-Práctica guiada: Shopping cart con complex business logic usando useReducer
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | Custom Hooks Advanced (90 min)
-
-Custom hooks con useReducer y complex state logic
-Hook composition patterns y reusability strategies
-Custom hooks testing y documentation best practices
-Proyecto práctico: useShoppingCart hook con full e-commerce functionality
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | Component Composition Mastery (90 min)
-
-Advanced children manipulation patterns
-Slot-based composition y flexible layouts
-Component injection patterns y dynamic rendering
-Desarrollo práctico: Flexible dashboard layout system con draggable components
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | E-commerce Platform Integration (105 min)
-
-Pair Programming: Complete e-commerce platform con all learned patterns
-Product catalog, shopping cart, user authentication, y order management
-State management architecture con multiple contexts y custom hooks
-Implementation: Full-featured shopping experience
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | Advanced Error Handling (105 min)
-
-Error boundaries implementation y error propagation strategies
-Graceful degradation patterns para failed components
-User error reporting y feedback mechanisms
-Desarrollo continuado: Robust error handling en e-commerce platform
-19:00 - 20:00 | Integration Testing Workshop (60 min)
-
-End-to-end testing preparation con React Testing Library
-User journey testing para complex applications
-Accessibility testing automation
-Práctica: Comprehensive testing strategy para e-commerce platform
-DÍA 23 - VIERNES: Custom Hooks Mastery y Refactoring
-9:00 - 9:15 | Daily Standup (15 min) Focus en code quality, refactoring, y custom hooks como architecture tool.
-
-9:15 - 10:45 | Custom Hooks Architecture (90 min)
-
-Custom hooks como architectural boundary y separation of concerns
-Hook dependency injection patterns
-Testing custom hooks in isolation y integration
-Práctica guiada: useAPI hook con caching, error handling, y loading states
-10:45 - 11:00 | Descanso (15 min)
-
-11:00 - 12:30 | Refactoring to Custom Hooks (90 min)
-
-Identifying refactoring opportunities en existing code
-Extracting stateful logic sin breaking existing functionality
-Migration strategies para large codebases
-Proyecto práctico: Refactoring e-commerce platform usando custom hooks
-12:30 - 13:30 | Almuerzo (60 min)
-
-13:30 - 15:00 | Hook Composition Patterns (90 min)
-
-Composing multiple custom hooks para complex functionality
-Hook dependency management y circular dependency prevention
-Performance considerations en hook composition
-Desarrollo práctico: Multi-level hook composition para task management system
-15:00 - 15:15 | Descanso (15 min)
-
-15:15 - 17:00 | Advanced State Synchronization (105 min)
-
-Pair Programming: Cross-tab state synchronization
-localStorage/sessionStorage integration con React state
-Real-time synchronization con external data sources
-Implementation: Multi-device shopping cart synchronization
-17:00 - 17:15 | Descanso (15 min)
-
-17:15 - 19:00 | Performance Profiling Workshop (105 min)
-
-React DevTools Profiler advanced usage
-Identifying performance bottlenecks en complex applications
-Memory leak detection y prevention strategies
-Desarrollo continuado: Performance optimization para all projects developed
-19:00 - 20:00 | Code Quality Assessment (60 min)
-
-Code review masterclass con industry-standard practices
-Technical debt identification y refactoring prioritization
-Documentation standards y code maintainability
-Assessment: Code quality audit para all Week 4 projects
-DÍA 24 - SÁBADO: Proyecto Final Integrador y Phase 2 Assessment
-9:00 - 9:15 | Final Project Standup (15 min) Planning para comprehensive project que integra todos los conceptos de Phase 2.
-
-9:15 - 11:00 | Capstone Project Planning (105 min)
-
-Collaborative design session: E-commerce platform completo con advanced features
-Architecture design workshop: component hierarchy, state management, y data flow
-Feature prioritization y MVP definition para time-boxed development
-Technical specification: Detailed planning document creation
-11:00 - 11:15 | Descanso (15 min)
-
-11:15 - 12:45 | Development Sprint 1 - Core Features (90 min)
-
-Pair Programming intensivo: Core e-commerce functionality implementation
-Product catalog con advanced filtering, searching, y sorting
-Shopping cart con complex business logic y state management
-User authentication flow con context-based state management
-12:45 - 13:45 | Almuerzo (60 min)
-
-13:45 - 15:30 | Development Sprint 2 - Advanced Features (105 min)
-
-Continuación desarrollo: Advanced features implementation
-Wishlist functionality, product comparison, y user reviews
-Real-time inventory updates y stock management
-Order history y user profile management
-15:30 - 15:45 | Descanso (15 min)
-
-15:45 - 17:00 | Integration Testing y Quality Assurance (75 min)
-
-Comprehensive testing suite implementation
-Accessibility audit y WCAG compliance verification
-Cross-browser testing y responsive design validation
-Performance optimization y lighthouse audit
-17:00 - 17:30 | Phase 2 Technical Assessment (30 min)
-
-Individual assessment: Complex React application development bajo tiempo limitado
-Challenge: Implement task management system con global state y custom hooks
-Evaluation criteria: Architecture decisions, code quality, testing, y user experience
-Portfolio presentation: Demo de all projects developed en Phase 2
-CRITERIOS DE EVALUACIÓN Y MÉTRICAS DE ÉXITO - FASE 2
-Evaluaciones Formativas Diarias (35%)
+- CSS Modules vs styled-components vs CSS-in-JS: pros, contras y casos de uso
+- Theme provider patterns para consistent design systems
+- Responsive props y breakpoint management en componentes
+- Implementación práctica: Theming completo de component library
+
+**19:00 - 20:00 | Component Testing Introduction (60 min)**
+
+- React Testing Library setup y philosophy: testing user behavior, no implementation details
+- Testing props, rendering, y user interactions básicas
+- Snapshot testing para componentes UI: cuándo usar y cuándo evitar
+- Práctica: Tests básicos para componentes desarrollados en el día
+
+---
+
+###### DÍA 14 - MARTES: Estado Avanzado y Controlled Components
+
+**9:00 - 9:15 | Daily Standup (15 min) Revisión de component library creada y preparación para conceptos de estado más complejos.**
+
+**9:15 - 10:45 | Advanced useState Patterns (90 min)**
+
+- State updates con objetos complejos: inmutabilidad y spreading patterns
+- Functional state updates para prevenir stale closures y race conditions
+- State normalization: cuándo flatten state vs nested objects
+- Práctica intensiva: Todo List con categorías, prioridades y filtering
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Controlled vs Uncontrolled Components (90 min)**
+
+- Controlled components: complete control sobre form state y validation
+- Uncontrolled components con useRef: cuándo usar para performance
+- Mixed approaches: controlled components con uncontrolled optimizations
+- Proyecto práctico: Formulario de registro completo con validation en tiempo real
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Form State Management (90 min)**
+
+- Custom form hooks para reusabilidad: useForm implementation básica
+- Validation strategies: sync vs async validation, server-side integration
+- Error handling y user feedback durante form submission
+- Desarrollo continuado: Sistema de formularios con múltiples steps
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Event Handling Patterns (105 min)**
+
+- Event delegation en React: cuándo es necesario y cuándo evitar
+- Custom event handlers con callback patterns
+- Preventing default behavior y event propagation en SPA context
+- Pair Programming: Interactive dashboard con múltiples event types
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | State Synchronization (105 min)**
+
+- Multiple components sharing state: preliminary patterns antes de context
+- Local storage synchronization con useEffect patterns
+- State persistence strategies y data hydration
+- Implementación práctica: User preferences system con persistence
+
+**19:00 - 20:00 | Performance Considerations (60 min)**
+
+- Re-render optimization strategies: memo, useMemo, useCallback introduction
+- Identifying performance bottlenecks con React DevTools Profiler
+- State colocation para performance: mantener state cerca de donde se usa
+- Assessment: Performance audit de componentes desarrollados
+
+---
+
+###### DÍA 15 - MIÉRCOLES: Listas, Keys y Renderizado Condicional
+
+**9:00 - 9:15 | Daily Standup (15 min) Enfoque en renderizado dinámico y patrones de listas complejas para interfaces reales.**
+
+**9:15 - 10:45 | Dynamic Lists y Key Props (90 min)**
+
+- React keys: por qué son críticas para performance y correctness
+- Key selection strategies: index vs unique IDs vs composite keys
+- List operations: add, remove, reorder y sus implications para keys
+- Práctica guiada: Contact manager con sorting, filtering, y CRUD operations
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Conditional Rendering Patterns (90 min)**
+
+- Ternary operators vs logical AND vs early returns: readability y performance
+- Component switching patterns para different UI states
+- Loading states, error boundaries preview, y empty states handling
+- Proyecto práctico: Data table con loading, error, empty, y success states
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Advanced Filtering y Search (90 min)**
+
+- Real-time search implementation con debouncing techniques
+- Multiple filter criteria y complex filtering logic
+- Search highlighting y result ranking básico
+- Desarrollo práctico: Product catalog con advanced search y filtering
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Virtualization Concepts (105 min)**
+
+- Large lists performance: cuándo es necesario virtualizar
+- React window/react-virtualized introduction para massive datasets
+- Infinite scrolling patterns y pagination strategies
+- Pair Programming: Contact list con 10,000+ entries y smooth scrolling
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | List Accessibility (105 min)**
+
+- ARIA roles para lists: listbox, grid, tree patterns
+- Keyboard navigation en lists complejas: arrow keys, home, end
+- Screen reader support para dynamic content changes
+- Implementación práctica: Fully accessible todo list con keyboard shortcuts
+
+**19:00 - 20:00 | Testing Dynamic Content (60 min)**
+
+- Testing lists con changing data: async testing patterns
+- User interaction testing: clicks, keyboard navigation, search
+- Accessibility testing automation con jest-axe
+- Práctica: Comprehensive test suite para contact manager
+
+---
+
+###### DÍA 16 - JUEVES: Lifting State Up y Component Communication
+
+**9:00 - 9:15 | Daily Standup (15 min) Preparación para patrones de comunicación entre componentes y arquitectura de estado.**
+
+**9:15 - 10:45 | Lifting State Up Fundamentals (90 min)**
+
+- Cuándo mover state hacia arriba: identificando component boundaries
+- Common parent patterns y state ownership decisions
+- Callback props para comunicación upward: naming conventions y patterns
+- Práctica guiada: Shopping cart con product list y cart summary
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Sibling Component Communication (90 min)**
+
+- State en common ancestor para sibling communication
+- Event-driven communication patterns sin external libraries
+- Message passing entre components distantly related
+- Proyecto práctico: Multi-step form con navigation y state sharing
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | State Architecture Planning (90 min)**
+
+- Component tree analysis para optimal state placement
+- State normalization strategies para complex applications
+- Derived state patterns: computing values from existing state
+- Desarrollo práctico: E-commerce product page con complex state interactions
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Shopping Cart Project - Architecture (105 min)**
+
+- Pair Programming: Shopping cart complete architecture design
+- State management planning: products, cart items, user preferences
+- Component breakdown y responsibility assignment
+- API integration planning para product data y cart persistence
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Shopping Cart - Implementation Phase 1 (105 min)**
+
+- Continuación desarrollo: Core components implementation
+- Product catalog con filtering y search capabilities
+- Add to cart functionality con quantity management
+- Real-time cart total calculation y tax computation
+
+**19:00 - 20:00 | Code Review y Architecture Validation (60 min)**
+
+- Cross-team code reviews: architecture decisions y implementation quality
+- State flow validation: ensuring predictable data flow
+- Performance considerations review
+- Preparation para advanced features tomorrow
+
+---
+
+###### DÍA 17 - VIERNES: Custom Hooks Introduction y Project Integration
+
+**9:00 - 9:15 | Daily Standup (15 min) Introducción a custom hooks como herramienta de reusabilidad y separation of concerns.**
+
+**9:15 - 10:45 | Custom Hooks Fundamentals (90 min)**
+
+- Cuándo extraer lógica a custom hooks: identifying reusable patterns
+- Hook naming conventions y parameter design
+- Stateful logic extraction: useCounter, useToggle, useLocalStorage examples
+- Práctica guiada: Implementación de useForm hook para reusabilidad
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Effect-based Custom Hooks (90 min)**
+
+- useEffect patterns en custom hooks: cleanup y dependency management
+- API integration hooks: useFetch, useAPI patterns
+- Subscription hooks para real-time data: useWebSocket preview
+- Proyecto práctico: useProducts hook para shopping cart integration
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Shopping Cart - Advanced Features (90 min)**
+
+- Pair Programming: Wishlist functionality con custom hooks
+- Product comparison feature usando state lifting patterns
+- User authentication state management (mock implementation)
+- Shopping cart persistence con localStorage integration
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Shopping Cart - Polish y UX (105 min)**
+
+- Loading states implementation durante API calls
+- Error handling y user feedback para all operations
+- Responsive design optimization para mobile shopping experience
+- Desarrollo continuado: Checkout process con form validation
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Performance Optimization Workshop (105 min)**
+
+- React.memo implementation para expensive components
+- useMemo y useCallback strategic usage en shopping cart
+- Bundle size analysis y code splitting preparation
+- Implementación práctica: Performance optimization de shopping cart completo
+
+**19:00 - 20:00 | Testing Custom Hooks (60 min)**
+
+- Testing isolated custom hooks con @testing-library/react-hooks
+-Integration testing para hooks con components
+- Mocking external dependencies en custom hooks
+- Práctica: Test suite completa para custom hooks desarrollados
+
+---
+
+###### DÍA 18 - SÁBADO: Project Integration y Semana 3 Assessment
+
+**9:00 - 9:15 | Weekend Integration Standup (15 min) Planificación de integration day y preparation para week assessment.**
+
+**9:15 - 11:00 | Shopping Cart - Final Integration (105 min)**
+
+- Pair Programming intensivo: Feature completion y bug fixing
+- Cross-browser testing y compatibility validation
+- Accessibility audit completo y corrections
+-Final polish: Animation, transitions, y micro-interactions
+
+**11:00 - 11:15 | Descanso (15 min)**
+
+**11:15 - 12:45 | Code Review Masterclass (90 min)**
+
+- Peer code reviews con structured feedback protocols
+- Identifying code smells y refactoring opportunities
+- Documentation review y README completion
+- Git workflow refinement y commit message optimization
+
+**12:45 - 13:45 | Almuerzo (60 min)**
+
+**13:45 - 15:30 | Portfolio Integration Workshop (105 min)**
+
+- Shopping cart integration en personal portfolio
+- Project documentation y technical decision explanations
+- Demo preparation y presentation skills development
+- Individual work: Portfolio updates con new React projects
+
+**15:30 - 15:45 | Descanso (15 min)**
+
+**15:45 - 17:00 | Semana 3 Technical Assessment (75 min)**
+
+- Individual assessment: React component development bajo tiempo limitado
+- Challenge: Implement contact manager con all features learned
+- Evaluation criteria: Code quality, functionality, accessibility, testing
+- Self-assessment: Reflection sobre learning progress y areas for improvement
+
+**17:00 - 17:30 | Sprint 1 Retrospective (30 min)**
+
+- Team retrospective: what worked well, what to improve
+- Individual learning reflection y goal setting para Semana 4
+- Feedback on pair programming effectiveness y collaboration
+- Planning: Preparation para React advanced concepts next week
+
+---
+
+### SEMANA 4: REACT INTERMEDIO Y ADVANCED PATTERNS
+
+###### DÍA 19 - LUNES: useEffect Mastery y Side Effects
+
+**9:00 - 9:15 | Week 4 Advanced Standup (15 min) Kick-off para concepts más avanzados y preparation para patterns complejos.**
+
+**9:15 - 10:45 | useEffect Advanced Patterns (90 min)**
+
+- Effect timing deep dive: layout effects vs passive effects
+- Multiple effects organization y separation of concerns
+- Effect dependencies optimization: cuando incluir functions y objects
+- Práctica guiada: News dashboard con multiple data sources y real-time updates
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | API Integration Patterns (90 min)**
+
+- Error boundaries implementation para API error handling
+- Loading states management con concurrent requests
+- Data caching strategies y cache invalidation
+- Proyecto práctico: Multi-source news aggregator con intelligent caching
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Real-time Data y Subscriptions (90 min)**
+
+- WebSocket integration patterns en React applications
+- Event source y server-sent events para live updates
+- Subscription cleanup y memory leak prevention
+- Desarrollo práctico: Live sports scores dashboard con WebSocket connection
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Advanced useEffect Cleanup (105 min)**
+
+- Pair Programming: Cleanup functions para complex subscriptions
+- Abort controllers para fetch request cancellation
+- Timer management y interval cleanup patterns
+- Implementación práctica: Chat application con typing indicators y real-time messaging
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Effect Dependencies Management (105 min)**
+
+- useCallback y useMemo strategic implementation
+- Custom hooks para effect logic encapsulation
+- Effect composition patterns y reusability strategies
+- Desarrollo continuado: Optimized news dashboard con minimal re-renders
+
+**19:00 - 20:00 | Side Effects Testing (60 min)**
+
+- Testing components con useEffect y async operations
+- Mocking timers, intervals, y WebSocket connections
+- Integration testing para real-time features
+- Práctica: Comprehensive testing para news dashboard
+
+---
+
+###### DÍA 20 - MARTES: Component Communication Advanced
+
+**9:00 - 9:15 | Daily Standup (15 min) Focus en patterns de comunicación más sofisticados y state management preparation.**
+
+**9:15 - 10:45 | Advanced Component Patterns (90 min)**
+
+- Compound components pattern para complex UI elements
+- Render props avanzado y function as children patterns
+- Higher-order components (HOCs) implementation y use cases
+- Práctica guiada: Accordion component con compound pattern y full accessibility
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | State Management Strategies (90 min)**
+
+- useReducer introduction para complex state logic
+- State machine concepts y finite state patterns
+- State normalization para nested data structures
+- Proyecto práctico: Task management system con complex workflow states
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | E-commerce Cart - Advanced State (90 min)**
+
+- Pair Programming: Shopping cart con useReducer implementation
+- Inventory management y stock level tracking
+- Discount codes y promotional pricing logic
+- Desarrollo práctico: Complex pricing calculations con multiple rules
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Cross-Component Communication (105 min)**
+
+- Event emitter patterns para loosely coupled components
+- Custom event dispatching y handling
+- State synchronization across component trees
+- Implementación práctica: Multi-tab shopping experience con synchronized cart
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Performance Optimization Deep Dive (105 min)**
+
+- React.memo strategic implementation y comparison functions
+- useMemo y useCallback optimization patterns
+- Component splitting strategies para code splitting preparation
+- Desarrollo continuado: Performance-optimized e-commerce experience
+
+**19:00 - 20:00 | Advanced Testing Patterns (60 min)**
+
+- Testing complex component interactions
+- Integration testing para state management patterns
+- Performance testing y render count validation
+- Práctica: Advanced testing suite para task management system
+
+---
+
+###### DÍA 21 - MIÉRCOLES: Context API Preview y Global State
+
+**9:00 - 9:15 | Daily Standup (15 min) Introduction to global state management y Context API fundamentals.**
+
+**9:15 - 10:45 | Context API Fundamentals (90 min)**
+
+- Cuándo usar Context vs props drilling: decision framework
+- Context creation, provider setup, y consumer patterns
+- Context performance implications y optimization strategies
+- Práctica guiada: Theme provider implementation con dark/light mode switching
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | useContext Hook Patterns (90 min)**
+
+- useContext vs Context.Consumer: modern patterns
+- Custom context hooks para improved developer experience
+- Context composition patterns para multiple contexts
+- Proyecto práctico: User authentication context con login/logout functionality
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Global State Architecture (90 min)**
+
+- Context + useReducer combination para complex global state
+- State slicing y context separation strategies
+- Performance optimization con multiple contexts
+- Desarrollo práctico: Shopping cart global state con Context API
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Task Management System - Global State (105 min)**
+
+- Pair Programming: Task management con global state architecture
+- User state, project state, y task state separation
+- Real-time updates propagation through context
+- Implementación práctica: Multi-user task collaboration simulation
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Context Performance Optimization (105 min)**
+
+- Context value memoization patterns
+- Preventing unnecessary re-renders en context consumers
+- Context splitting strategies para performance
+- Desarrollo continuado: Optimized task management con minimal re-renders
+
+**19:00 - 20:00 | Global State Testing (60 min)**
+
+- Testing context providers y consumers
+- Integration testing para global state changes
+- Mocking context values para isolated testing
+- Práctica: Test suite para task management global state
+
+---
+
+###### DÍA 22 - JUEVES: Advanced Hooks y Composition Patterns
+
+**9:00 - 9:15 | Daily Standup (15 min) Advanced hooks exploration y complex composition patterns.**
+
+**9:15 - 10:45 | useReducer Advanced Patterns (90 min)**
+
+- Complex reducer logic y action pattern design
+- Reducer composition y state machine implementation
+- useReducer vs useState: decision criteria y migration strategies
+- Práctica guiada: Shopping cart con complex business logic usando useReducer
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Custom Hooks Advanced (90 min)**
+
+- Custom hooks con useReducer y complex state logic
+- Hook composition patterns y reusability strategies
+- Custom hooks testing y documentation best practices
+- Proyecto práctico: useShoppingCart hook con full e-commerce functionality
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Component Composition Mastery (90 min)**
+
+- Advanced children manipulation patterns
+- Slot-based composition y flexible layouts
+- Component injection patterns y dynamic rendering
+- Desarrollo práctico: Flexible dashboard layout system con draggable components
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | E-commerce Platform Integration (105 min)**
+
+- Pair Programming: Complete e-commerce platform con all learned patterns
+- Product catalog, shopping cart, user authentication, y order management
+- State management architecture con multiple contexts y custom hooks
+- Implementation: Full-featured shopping experience
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Advanced Error Handling (105 min)**
+
+- Error boundaries implementation y error propagation strategies
+- Graceful degradation patterns para failed components
+- User error reporting y feedback mechanisms
+- Desarrollo continuado: Robust error handling en e-commerce platform
+
+**19:00 - 20:00 | Integration Testing Workshop (60 min)**
+
+- End-to-end testing preparation con React Testing Library
+- User journey testing para complex applications
+- Accessibility testing automation
+- Práctica: Comprehensive testing strategy para e-commerce platform
+
+---
+
+###### DÍA 23 - VIERNES: Custom Hooks Mastery y Refactoring
+
+**9:00 - 9:15 | Daily Standup (15 min) Focus en code quality, refactoring, y custom hooks como architecture tool.**
+
+**9:15 - 10:45 | Custom Hooks Architecture (90 min)**
+
+- Custom hooks como architectural boundary y separation of concerns
+- Hook dependency injection patterns
+- Testing custom hooks in isolation y integration
+- Práctica guiada: useAPI hook con caching, error handling, y loading states
+
+**10:45 - 11:00 | Descanso (15 min)**
+
+**11:00 - 12:30 | Refactoring to Custom Hooks (90 min)**
+
+- Identifying refactoring opportunities en existing code
+- Extracting stateful logic sin breaking existing functionality
+- Migration strategies para large codebases
+- Proyecto práctico: Refactoring e-commerce platform usando custom hooks
+
+**12:30 - 13:30 | Almuerzo (60 min)**
+
+**13:30 - 15:00 | Hook Composition Patterns (90 min)**
+
+- Composing multiple custom hooks para complex functionality
+- Hook dependency management y circular dependency prevention
+- Performance considerations en hook composition
+- Desarrollo práctico: Multi-level hook composition para task management system
+
+**15:00 - 15:15 | Descanso (15 min)**
+
+**15:15 - 17:00 | Advanced State Synchronization (105 min)**
+
+- Pair Programming: Cross-tab state synchronization
+- localStorage/sessionStorage integration con React state
+- Real-time synchronization con external data sources
+- Implementation: Multi-device shopping cart synchronization
+
+**17:00 - 17:15 | Descanso (15 min)**
+
+**17:15 - 19:00 | Performance Profiling Workshop (105 min)**
+
+- React DevTools Profiler advanced usage
+- Identifying performance bottlenecks en complex applications
+- Memory leak detection y prevention strategies
+- Desarrollo continuado: Performance optimization para all projects developed
+
+**19:00 - 20:00 | Code Quality Assessment (60 min)**
+
+- Code review masterclass con industry-standard practices
+- Technical debt identification y refactoring prioritization
+- Documentation standards y code maintainability
+- Assessment: Code quality audit para all Week 4 projects
+
+---
+
+###### DÍA 24 - SÁBADO: Proyecto Final Integrador y Phase 2 Assessment
+
+**9:00 - 9:15 | Final Project Standup (15 min) Planning para comprehensive project que integra todos los conceptos de Phase 2.**
+
+**9:15 - 11:00 | Capstone Project Planning (105 min)**
+
+- Collaborative design session: E-commerce platform completo con advanced features
+- Architecture design workshop: component hierarchy, state management, y data flow
+- Feature prioritization y MVP definition para time-boxed development
+- Technical specification: Detailed planning document creation
+
+**11:00 - 11:15 | Descanso (15 min)**
+
+**11:15 - 12:45 | Development Sprint 1 - Core Features (90 min)**
+
+- Pair Programming intensivo: Core e-commerce functionality implementation
+- Product catalog con advanced filtering, searching, y sorting
+- Shopping cart con complex business logic y state management
+-User authentication flow con context-based state management
+
+**12:45 - 13:45 | Almuerzo (60 min)**
+
+**13:45 - 15:30 | Development Sprint 2 - Advanced Features (105 min)**
+
+- Continuación desarrollo: Advanced features implementation
+- Wishlist functionality, product comparison, y user reviews
+- Real-time inventory updates y stock management
+- Order history y user profile management
+
+**15:30 - 15:45 | Descanso (15 min)**
+
+**15:45 - 17:00 | Integration Testing y Quality Assurance (75 min)**
+
+- Comprehensive testing suite implementation
+- Accessibility audit y WCAG compliance verification
+- Cross-browser testing y responsive design validation
+- Performance optimization y lighthouse audit
+
+**17:00 - 17:30 | Phase 2 Technical Assessment (30 min)**
+
+**Individual assessment: Complex React application development bajo tiempo limitado**
+
+*Challenge:* Implement task management system con global state y custom hooks
+*Evaluation criteria:* Architecture decisions, code quality, testing, y user experience
+*Portfolio presentation:* Demo de all projects developed en Phase 2
+
+***CRITERIOS DE EVALUACIÓN Y MÉTRICAS DE ÉXITO - FASE 2***
+
+*Evaluaciones Formativas Diarias (35%)*
+
 Los aprendices demuestran progreso consistente a través de evaluaciones diarias que incluyen participación activa en daily standups donde comunican claramente su progreso, blockers identificados, y planes para el día. Durante las sesiones de pair programming, muestran capacidad de colaboración efectiva, proporcionan code reviews constructivos, y comparten conocimiento de manera clara con sus compañeros. La calidad del código debe reflejar implementación consistente de mejores prácticas React, incluyendo component composition apropiada, state management eficiente, y documentación adecuada mediante comentarios y naming conventions claros.
 
-Proyectos Prácticos Escalables (40%)
+*Proyectos Prácticos Escalables (40%)*
+
 Los proyectos desarrollados durante esta fase demuestran comprensión profunda de React fundamentals y patterns intermedios. La biblioteca de componentes UI debe mostrar reusabilidad efectiva, props interface bien diseñada, y accessibility implementation completa. El shopping cart project requiere arquitectura de estado sofisticada, integration con APIs simuladas, user experience optimizada para diferentes device sizes, y error handling robusto. El task management system debe implementar global state management usando Context API, custom hooks para logic reuse, y real-time features simulation. Todos los proyectos deben incluir comprehensive testing coverage y deployment-ready optimization.
 
-Assessment Técnico Final (25%)
+**Assessment Técnico Final (25%)**
+
 La evaluación final de Phase 2 consiste en desarrollo individual de aplicación React compleja bajo tiempo limitado, donde los aprendices deben demostrar mastery de state management patterns, component communication strategies, y custom hooks implementation. Se evalúa la capacidad de problem-solving bajo presión, debugging skills cuando enfrentan errores complejos, y implementation de accessibility standards y performance optimizations. La presentación del portfolio debe mostrar clear articulation de technical decisions, trade-offs considerados durante development, y understanding de React ecosystem y best practices.
 
-Competencias Específicas Evaluadas
+*Competencias Específicas Evaluadas*
+
 Para progreso exitoso hacia Phase 3, los aprendices deben demostrar dominio completo de React component lifecycle y hooks system, incluyendo useEffect para side effects management, useState para local component state, y useContext para global state access. Deben mostrar competencia en state lifting patterns y component communication strategies, capacity para designing y implementing custom hooks que encapsulen complex logic de manera reusable, y solid understanding de performance optimization techniques usando React.memo, useMemo, y useCallback appropriately.
 
-Criterios de Progreso a Fase 3
+*Criterios de Progreso a Fase 3*
+
 La transition hacia Phase 3 (React Advanced y Ecosystem) requiere demonstration de comprehensive React fundamentals mastery, incluyendo confident use de todos los hooks básicos, effective component composition patterns, y solid architectural decision-making para medium-complexity applications. Los aprendices deben mostrar capability de debugging complex React applications usando developer tools, implementing comprehensive testing strategies que cubran unit, integration, y accessibility testing, y maintaining high code quality standards que reflejen industry best practices. Additionally, deben demostrar collaborative development mindset, effective communication durante technical discussions, y continuous learning attitude que les permita absorber advanced concepts en la siguiente fase.
 
 ¿Procedo con el desarrollo detallado de la Fase 3 (Semanas 5-6) enfocada en React avanzado, Context API mastery, React Router, y optimización de performance? Esta próxima fase llevará a los aprendices hacia conceptos más sofisticados que los prepararán para development de aplicaciones React de nivel profesional.
 
+---
 
 
+## FASE 3: REACT AVANZADO Y ARQUITECTURA ESCALABLE
 
-Reintentar
-ok de acuerdo procede con la fase 3
-
-Editar
-
-Diseñó plan detallado para Fase 3 del bootcamp de React
-6s
-
-
-
-
-
-
-FASE 3: REACT AVANZADO Y ARQUITECTURA ESCALABLE
 Semanas 5 y 6 - Plan Detallado Día a Día
 Esta tercera fase eleva a los aprendices hacia el dominio completo de React avanzado, introduciendo conceptos arquitecturales sofisticados que son fundamentales para aplicaciones empresariales. El enfoque pedagógico se intensifica, combinando teoría profunda con implementación práctica de patterns complejos que preparan para el desarrollo profesional de nivel senior.
 
