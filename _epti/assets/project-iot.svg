@@ -1,0 +1,60 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="250" fill="#f8f9fa"/>
+  
+  <!-- Arduino board -->
+  <rect x="150" y="90" width="100" height="60" fill="#00979c" rx="5"/>
+  <rect x="160" y="100" width="80" height="40" fill="#004d4f" rx="3"/>
+  
+  <!-- Pins -->
+  <rect x="145" y="95" width="5" height="8" fill="#ffc107"/>
+  <rect x="145" y="105" width="5" height="8" fill="#ffc107"/>
+  <rect x="145" y="115" width="5" height="8" fill="#ffc107"/>
+  <rect x="145" y="125" width="5" height="8" fill="#ffc107"/>
+  <rect x="145" y="135" width="5" height="8" fill="#ffc107"/>
+  
+  <rect x="250" y="95" width="5" height="8" fill="#ffc107"/>
+  <rect x="250" y="105" width="5" height="8" fill="#ffc107"/>
+  <rect x="250" y="115" width="5" height="8" fill="#ffc107"/>
+  <rect x="250" y="125" width="5" height="8" fill="#ffc107"/>
+  <rect x="250" y="135" width="5" height="8" fill="#ffc107"/>
+  
+  <!-- USB connector -->
+  <rect x="180" y="85" width="20" height="10" fill="#424242" rx="2"/>
+  
+  <!-- LED -->
+  <circle cx="220" cy="105" r="4" fill="#ff9800"/>
+  
+  <!-- Sensors -->
+  <rect x="100" y="60" width="25" height="15" fill="#757575" rx="2"/>
+  <rect x="275" y="60" width="25" height="15" fill="#757575" rx="2"/>
+  <rect x="100" y="175" width="25" height="15" fill="#757575" rx="2"/>
+  <rect x="275" y="175" width="25" height="15" fill="#757575" rx="2"/>
+  
+  <!-- Connections -->
+  <line x1="125" y1="67" x2="150" y2="95" stroke="#ff9800" stroke-width="2"/>
+  <line x1="275" y1="67" x2="250" y2="95" stroke="#ff9800" stroke-width="2"/>
+  <line x1="125" y1="182" x2="150" y2="145" stroke="#ff9800" stroke-width="2"/>
+  <line x1="275" y1="182" x2="250" y2="145" stroke="#ff9800" stroke-width="2"/>
+  
+  <!-- Wireless signals -->
+  <path d="M320 100 Q330 90 340 100" stroke="#ff9800" stroke-width="2" fill="none"/>
+  <path d="M325 105 Q335 95 345 105" stroke="#ff9800" stroke-width="2" fill="none"/>
+  <path d="M330 110 Q340 100 350 110" stroke="#ff9800" stroke-width="2" fill="none"/>
+  
+  <!-- Cloud -->
+  <ellipse cx="360" cy="50" rx="25" ry="15" fill="#9e9e9e" opacity="0.7"/>
+  <ellipse cx="370" cy="45" rx="20" ry="12" fill="#9e9e9e" opacity="0.7"/>
+  <ellipse cx="350" cy="45" rx="15" ry="10" fill="#9e9e9e" opacity="0.7"/>
+  
+  <!-- Labels -->
+  <text x="95" y="55" fill="#424242" font-family="Arial, sans-serif" font-size="10">TEMP</text>
+  <text x="275" y="55" fill="#424242" font-family="Arial, sans-serif" font-size="10">LIGHT</text>
+  <text x="95" y="200" fill="#424242" font-family="Arial, sans-serif" font-size="10">MOTION</text>
+  <text x="275" y="200" fill="#424242" font-family="Arial, sans-serif" font-size="10">SOUND</text>
+  <text x="340" y="75" fill="#424242" font-family="Arial, sans-serif" font-size="10">CLOUD</text>
+  <text x="170" y="80" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ARDUINO</text>
+  
+  <!-- Title -->
+  <text x="200" y="30" fill="#424242" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">IoT Project</text>
+</svg>
