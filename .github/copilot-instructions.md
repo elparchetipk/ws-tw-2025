@@ -1,3 +1,31 @@
+# 🌐 Configuración de Idioma
+
+**IMPORTANTE**: Todas las respuestas, explicaciones y comentarios de código deben estar en **ESPAÑOL**.
+
+- Las explicaciones de código deben ser en español
+- Los comentarios en el código deben estar en español
+- Los mensajes de error y validación deben estar en español
+- La documentación generada debe estar en español
+
+## 💬 Configuración de GitHub Copilot Chat
+
+Para configurar GitHub Copilot Chat en español:
+
+1. **VS Code Settings**: Agrega a `.vscode/settings.json`:
+
+   ```json
+   {
+     "github.copilot.chat.localeOverride": "es"
+   }
+   ```
+
+2. **Prompt en Chat**: Siempre inicia con:
+   ```
+   Por favor, responde en español. Todas las explicaciones deben estar en español.
+   ```
+
+---
+
 # 🤖 Instrucciones GitHub Copilot - Entrenamiento WorldSkills React/Express.js
 
 ## 📋 Contexto del Proyecto
@@ -22,6 +50,8 @@ Este es un **programa de entrenamiento Zero to Hero React/Express.js** diseñado
 ### **Estándares de Desarrollo React**
 
 Al generar código React, siempre sigue estas convenciones:
+
+- usar pnpm (No npm)
 
 #### **1. Componentes Funcionales con Hooks**
 
@@ -74,28 +104,28 @@ export default Producto;
 // Custom hook para manejar formularios
 import { useState } from 'react';
 
-const useForm = (initialValues) => {
+const useForm = initialValues => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
-    setValues((prev) => ({
+    setValues(prev => ({
       ...prev,
       [name]: value,
     }));
     // Limpiar error del campo al cambiar
     if (errors[name]) {
-      setErrors((prev) => ({
+      setErrors(prev => ({
         ...prev,
         [name]: '',
       }));
     }
   };
 
-  const validate = (validationRules) => {
+  const validate = validationRules => {
     const newErrors = {};
-    Object.keys(validationRules).forEach((field) => {
+    Object.keys(validationRules).forEach(field => {
       const rule = validationRules[field];
       const value = values[field];
 
@@ -490,7 +520,7 @@ const FormularioProducto = ({ producto = {}, onSubmit, loading = false }) => {
     categoria: producto.categoria || '',
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
 
     const validationRules = {
@@ -803,14 +833,14 @@ export default useApi;
 
 ```javascript
 // utils/helpers.js - Funciones utilitarias
-export const formatearPrecio = (precio) => {
+export const formatearPrecio = precio => {
   return new Intl.NumberFormat('es-CO', {
     style: 'currency',
     currency: 'COP',
   }).format(precio);
 };
 
-export const validarEmail = (email) => {
+export const validarEmail = email => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 };
@@ -912,7 +942,7 @@ const productoSchema = new mongoose.Schema(
       type: Number,
       required: [true, 'El precio es requerido'],
       min: [0, 'El precio no puede ser negativo'],
-      get: (v) => Math.round(v * 100) / 100, // Redondear a 2 decimales
+      get: v => Math.round(v * 100) / 100, // Redondear a 2 decimales
     },
     categoria: {
       type: mongoose.Schema.Types.ObjectId,
@@ -961,14 +991,14 @@ module.exports = mongoose.model('Producto', productoSchema);
 ```bash
 # Comandos Docker para desarrollo
 docker compose up -d
-docker compose exec frontend npm start
-docker compose exec backend npm run dev
+docker compose exec frontend pnpm start
+docker compose exec backend pnpm run dev
 docker compose logs -f frontend
 docker compose logs -f backend
 
 # Para instalación de dependencias
-docker compose exec frontend npm install
-docker compose exec backend npm install
+docker compose exec frontend pnpm install
+docker compose exec backend pnpm install
 ```
 
 ### **Docker Compose React/Express.js**
@@ -1046,7 +1076,7 @@ volumes:
 
 ```javascript
 // Patrón de generación CRUD rápido para React
-const useCrud = (apiEndpoint) => {
+const useCrud = apiEndpoint => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -1064,7 +1094,7 @@ const useCrud = (apiEndpoint) => {
     }
   };
 
-  const createItem = async (item) => {
+  const createItem = async item => {
     const response = await fetch(`/api/${apiEndpoint}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -1082,7 +1112,7 @@ const useCrud = (apiEndpoint) => {
     return response.json();
   };
 
-  const deleteItem = async (id) => {
+  const deleteItem = async id => {
     await fetch(`/api/${apiEndpoint}/${id}`, {
       method: 'DELETE',
     });
@@ -1102,32 +1132,39 @@ const useCrud = (apiEndpoint) => {
 
 ### **Patrones de Ahorro de Tiempo**
 
-````jsx
+```jsx
 // Componente genérico para formularios
 const GenericForm = ({ fields, onSubmit, initialValues = {} }) => {
-    const { values, handleChange, errors, validate } = useForm(initialValues);
+  const { values, handleChange, errors, validate } = useForm(initialValues);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validate(fields)) {
-            onSubmit(values);
-        }
-    };
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (validate(fields)) {
+      onSubmit(values);
+    }
+  };
 
-    return (
-        <form onSubmit={handleSubmit}>
-            {fields.map(field => (
-                <FormField
-                    key={field.name}
-                    {...field}
-                    value={values[field.name] || ''}
-                    onChange={handleChange}
-                    error={errors[field.name]}
-                />
-            ))}
-            <button type="submit" className="btn btn-primary">
-                Guardar
-            </button>
+  return (
+    <form onSubmit={handleSubmit}>
+      {fields.map(field => (
+        <FormField
+          key={field.name}
+          {...field}
+          value={values[field.name] || ''}
+          onChange={handleChange}
+          error={errors[field.name]}
+        />
+      ))}
+      <button
+        type="submit"
+        className="btn btn-primary">
+        Guardar
+      </button>
+    </form>
+  );
+};
+```
+
 ## 🎯 Estándares de Calidad de Código
 
 ### **Siempre Incluir**
@@ -1150,20 +1187,20 @@ const GenericForm = ({ fields, onSubmit, initialValues = {} }) => {
 
 ## 🔧 Herramientas de Desarrollo
 
-### **Comandos NPM para React/Express**
+### **Comandos pnpm para React/Express**
 
 ```bash
 # Más frecuentemente usados en entrenamiento
-npm create react-app frontend
-npx create-react-app frontend --template typescript
-npm init -y
-npm install express mongoose cors dotenv
-npm install -D nodemon jest supertest
-npm install react-router-dom bootstrap
-npm run dev
-npm test
-npm run build
-````
+pnpm create react-app frontend
+pnpm create react-app frontend --template typescript
+pnpm init -y
+pnpm install express mongoose cors dotenv
+pnpm install -D nodemon jest supertest
+pnpm install react-router-dom bootstrap
+pnpm run dev
+pnpm test
+pnpm run build
+```
 
 ## 📖 Estilo de Documentación
 
@@ -1177,7 +1214,7 @@ npm run build
  * @returns {Promise<Object>} La instancia del producto creado
  * @throws {Error} Si la creación falla
  */
-const crearProducto = async (data) => {
+const crearProducto = async data => {
   // Validar campos requeridos
   validarDatosProducto(data);
 
@@ -1209,7 +1246,7 @@ const FormularioSeguro = ({ onSubmit }) => {
     password: '',
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
 
     // Validar en frontend
