@@ -9,6 +9,7 @@ Metodología: Técnica Pomodoro progresiva (25min → 40min)
 Total de horas: 120 horas de formación intensiva
 
 SEMANA 1: Fundamentos y Herramientas Base
+
 Día 1: Fundamentos HTML5 y Herramientas de Desarrollo
 12:00-12:45 Inauguración y presentación del bootcamp
 12:45-13:10 Configuración del entorno de desarrollo (VS Code, extensiones)
@@ -22,6 +23,7 @@ Día 1: Fundamentos HTML5 y Herramientas de Desarrollo
 15:45-16:10 Práctica: Formulario accesible
 16:10-16:35 Introducción al bash scripting
 16:35-17:00 Configuración de autocommit script
+
 Día 2: CSS3 Avanzado y Responsive Design
 12:00-12:25 CSS Grid Layout fundamentals
 12:25-12:50 CSS Flexbox mastery
@@ -35,6 +37,7 @@ Día 2: CSS3 Avanzado y Responsive Design
 15:25-15:50 Metodología BEM para CSS
 15:50-16:15 Práctica: Grid layout responsive
 16:15-17:00 Challenge: Recrear layouts de WorldSkills
+
 Día 3: JavaScript ES6+ Fundamentals
 12:00-12:25 Variables, const, let, template literals
 12:25-12:50 Functions, arrow functions, destructuring
@@ -48,6 +51,7 @@ Día 3: JavaScript ES6+ Fundamentals
 15:25-15:50 Event handling y delegation
 15:50-16:15 Práctica: Reloj digital interactivo
 16:15-17:00 Challenge: Algoritmos de palindromos y rotación
+
 Día 4: Validaciones y Seguridad Frontend
 12:00-12:25 Regular expressions (RegExp) mastery
 12:25-12:50 Form validation con RegExp
@@ -61,6 +65,7 @@ Día 4: Validaciones y Seguridad Frontend
 15:25-15:50 Testing de validaciones
 15:50-16:15 Práctica: Sistema de validación robusto
 16:15-17:00 Challenge: Contador CSS puro (sin JS)
+
 Día 5: Control de Versiones y Colaboración
 12:00-12:25 Git workflow avanzado (branching, merging)
 12:25-12:50 GitHub collaboration (pull requests, issues)
@@ -74,6 +79,7 @@ Día 5: Control de Versiones y Colaboración
 15:25-15:50 Licenses y open source
 15:50-16:15 Práctica: Proyecto colaborativo
 16:15-17:00 Challenge: Speed-test JS problems
+
 Día 6: Introducción a Docker y Contenedores
 12:00-12:25 Conceptos de contenedores y Docker
 12:25-12:50 Dockerfile creation y best practices
@@ -88,6 +94,7 @@ Día 6: Introducción a Docker y Contenedores
 15:50-16:15 Práctica: Containerizar aplicación static
 16:15-17:00 Primera evaluación práctica (simulacro mini-competencia)
 SEMANA 2: Framework Frontend y APIs
+
 Día 7: React Fundamentals
 12:00-12:30 React conceptos y Virtual DOM
 12:30-13:00 JSX syntax y components
@@ -100,6 +107,7 @@ Día 7: React Fundamentals
 15:30-16:00 React Hooks (useState, useEffect)
 16:00-16:30 Custom hooks creation
 16:30-17:00 Práctica: Dashboard interactivo
+
 Día 8: React Advanced Patterns
 12:00-12:30 useContext y Context API
 12:30-13:00 useReducer para state complejo
@@ -112,6 +120,7 @@ Día 8: React Advanced Patterns
 15:30-16:00 Testing con React Testing Library
 16:00-16:30 Accessibility en React (ARIA)
 16:30-17:00 Práctica: App con múltiples contexts
+
 Día 9: React Router y Navigation
 12:00-12:30 React Router setup y basic routing
 12:30-13:00 Dynamic routing y URL parameters
@@ -124,6 +133,7 @@ Día 9: React Router y Navigation
 15:30-16:00 History API y browser navigation
 16:00-16:30 SEO considerations para SPAs
 16:30-17:00 Práctica: Multi-page React app
+
 Día 10: Node.js y Express.js Fundamentals
 12:00-12:30 Node.js runtime y npm ecosystem
 12:30-13:00 pnpm setup y package management
@@ -136,6 +146,7 @@ Día 10: Node.js y Express.js Fundamentals
 15:30-16:00 Error handling middleware
 16:00-16:30 Logging y debugging
 16:30-17:00 Práctica: REST API básica
+
 Día 11: APIs REST y Database Integration
 12:00-12:30 REST principles y HTTP methods
 12:30-13:00 SQLite setup y básico
@@ -148,6 +159,7 @@ Día 11: APIs REST y Database Integration
 15:30-16:00 API documentation con Swagger
 16:00-16:30 Postman testing y automation
 16:30-17:00 Práctica: API completa con database
+
 Día 12: Security y Authentication
 12:00-12:30 Authentication vs Authorization
 12:30-13:00 JWT tokens y implementation
@@ -160,7 +172,9 @@ Día 12: Security y Authentication
 15:30-16:00 SQL injection prevention
 16:00-16:30 Security headers y best practices
 16:30-17:00 Segunda evaluación práctica (API segura)
+
 SEMANA 3: Integración Full-Stack y Optimización
+
 Día 13: Frontend-Backend Integration
 12:00-12:30 Fetch API y async data loading
 12:30-13:00 Error handling en peticiones HTTP
@@ -173,6 +187,7 @@ Día 13: Frontend-Backend Integration
 15:30-16:00 Real-time updates (WebSockets basic)
 16:00-16:30 API pagination y infinite scroll
 16:30-17:00 Práctica: App completa integrada
+
 Día 14: Testing y Quality Assurance
 12:00-12:30 Testing philosophy y TDD
 12:30-13:00 Unit testing con Jest
@@ -185,6 +200,7 @@ Día 14: Testing y Quality Assurance
 15:30-16:00 Performance testing
 16:00-16:30 Accessibility testing (axe-core)
 16:30-17:00 Práctica: Test suite completa
+
 Día 15: Performance Optimization
 12:00-12:30 Performance metrics y Web Vitals
 12:30-13:00 Bundle optimization (Webpack/Vite)
@@ -197,6 +213,7 @@ Día 15: Performance Optimization
 15:30-16:00 Database query optimization
 16:00-16:30 Monitoring y profiling tools
 16:30-17:00 Práctica: Optimización completa
+
 Día 16: Deployment y DevOps
 12:00-12:30 Docker Compose para full-stack
 12:30-13:00 Production builds y environment variables
@@ -209,6 +226,7 @@ Día 16: Deployment y DevOps
 15:30-16:00 Backup strategies
 16:00-16:30 CI/CD pipeline completo
 16:30-17:00 Práctica: Deploy completo
+
 Día 17: Mobile-First y PWA
 12:00-12:30 Mobile-first design principles
 12:30-13:00 Touch interfaces y gestures
@@ -221,6 +239,7 @@ Día 17: Mobile-First y PWA
 15:30-16:00 Push notifications
 16:00-16:30 Performance en mobile
 16:30-17:00 Práctica: Mobile app completa
+
 Día 18: Advanced Topics y Troubleshooting
 12:00-12:30 Advanced Git (rebase, cherry-pick)
 12:30-13:00 Debugging complex issues
@@ -234,6 +253,7 @@ Día 18: Advanced Topics y Troubleshooting
 16:00-16:30 Analytics integration
 16:30-17:00 Tercera evaluación práctica (proyecto integrado)
 SEMANA 4: Simulacros de Competencia WorldSkills
+
 Día 19: Simulacro Completo - Speed Test
 12:00-12:15 Briefing y setup del ambiente de competencia
 12:15-15:15 SIMULACRO SPEED-TEST (3 horas continuas)
@@ -243,6 +263,7 @@ Time pressure real de competencia
 15:15-15:30 DESCANSO
 15:30-16:30 Code review y feedback inmediato
 16:30-17:00 Análisis de errores y mejoras
+
 Día 20: Simulacro Final - Proyecto Frontend Completo
 12:00-12:15 Briefing proyecto medallería olímpica
 12:15-16:15 SIMULACRO PROYECTO COMPLETO (4 horas)
