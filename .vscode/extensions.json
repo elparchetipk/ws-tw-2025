@@ -1,79 +1,113 @@
 {
+  // 🚀 EXTENSIONES RECOMENDADAS - REACT + VITE + EXPRESS.JS + BOOTSTRAP 5.3+
+  // Configuración optimizada para WorldSkills Training
+
   "recommendations": [
-    // === EXTENSIONES ESENCIALES PARA PHP/LARAVEL ===
-    "bmewburn.vscode-intelephense-client",
-    "onecentlin.laravel-blade",
-    "onecentlin.laravel-extension-pack",
-    "ryannaddy.laravel-artisan",
-    "amiralizadeh9480.laravel-extra-intellisense",
-    "codingyu.laravel-goto-view",
-    "stef-k.laravel-goto-controller",
+    // ⚛️ REACT & JSX ESSENTIALS
+    "dsznajder.es7-react-js-snippets", // React snippets (rafce, imr, etc.)
+    "ms-vscode.vscode-typescript-next", // TypeScript avanzado
+    "formulahendry.auto-rename-tag", // Auto-rename paired tags
+    "formulahendry.auto-close-tag", // Auto-close paired tags
+    "christian-kohler.npm-intellisense", // NPM IntelliSense
+    "ms-vscode.vscode-json", // JSON support mejorado
 
-    // === DESARROLLO WEB GENERAL ===
-    "ms-vscode.vscode-json",
-    "bradlc.vscode-tailwindcss",
-    "pranaygp.vscode-css-peek",
-    "formulahendry.auto-rename-tag",
-    "formulahendry.auto-close-tag",
-    "ms-vscode.live-server",
+    // 🎨 FRONTEND DEVELOPMENT
+    "esbenp.prettier-vscode", // Prettier formatter
+    "dbaeumer.vscode-eslint", // ESLint linter
+    "zignd.html-css-class-completion", // HTML/CSS class completion
+    "pranaygp.vscode-css-peek", // CSS peek functionality
+    "ritwickdey.LiveServer", // Live Server
+    "ms-vscode.live-server", // Live Preview
 
-    // === DOCKER Y DEVOPS ===
-    "ms-azuretools.vscode-docker",
-    "ms-azuretools.vscode-containers",
-    "ms-vscode-remote.remote-containers",
+    // 🅱️ BOOTSTRAP 5.3+ SPECIFIC
+    "thekalinga.bootstrap4-vscode", // Bootstrap 4/5 snippets
+    "ankitcode.bootstrap-snippets", // Bootstrap snippets
+    "formulahendry.auto-close-tag", // Auto close HTML tags
+    "abusaidm.html-snippets", // HTML5 snippets
 
-    // === BASE DE DATOS ===
-    "cweijan.vscode-postgresql-client2",
-    "cweijan.vscode-mysql-client2",
-    "adpyke.vscode-sql-formatter",
+    // 🔧 VITE DEVELOPMENT
+    "antfu.vite", // Vite support
+    "usernamehw.errorlens", // Error lens
+    "bradlc.vscode-tailwindcss", // Tailwind integration (opcional)
 
-    // === GIT Y CONTROL DE VERSIONES ===
-    "eamodio.gitlens",
-    "donjayamanne.githistory",
-    "GitHub.vscode-pull-request-github",
+    // 🌐 EXPRESS.JS & NODE.JS
+    "ms-vscode.vscode-node-azure-pack", // Node.js pack
+    "christian-kohler.path-intellisense", // Path IntelliSense
+    "ms-vscode.vscode-js-debug", // JavaScript debugger
+    "formulahendry.code-runner", // Code runner
+    "rangav.vscode-thunder-client", // Thunder Client (API testing)
 
-    // === TESTING Y DEBUGGING ===
-    "recca0120.vscode-phpunit",
-    "xdebug.php-debug",
-    "felixfbecker.php-intellisense",
+    // 📁 FILE & PROJECT MANAGEMENT
+    "PKief.material-icon-theme", // Material icons
+    "vscode-icons-team.vscode-icons", // VSCode icons
+    "gruntfuggly.todo-tree", // TODO tree
+    "wayou.vscode-todo-highlight", // TODO highlight
 
-    // === CALIDAD DE CÓDIGO ===
-    "SonarSource.sonarlint-vscode",
-    "junstyle.php-cs-fixer",
-    "persoderlind.vscode-phpcbf",
-    "ikappas.phpcs",
+    // 🎯 PRODUCTIVITY & UTILITIES
+    "GitHub.copilot", // GitHub Copilot
+    "GitHub.copilot-chat", // GitHub Copilot Chat
+    "GitHub.vscode-pull-request-github", // GitHub Pull Requests
+    "eamodio.gitlens", // GitLens
+    "mhutchie.git-graph", // Git Graph
+    "donjayamanne.githistory", // Git History
 
-    // === HERRAMIENTAS DE PRODUCTIVIDAD ===
-    "alefragnani.Bookmarks",
-    "Gruntfuggly.todo-tree",
-    "streetsidesoftware.code-spell-checker",
-    "streetsidesoftware.code-spell-checker-spanish",
-    "christian-kohler.path-intellisense",
+    // 🔍 SEARCH & NAVIGATION
+    "alefragnani.Bookmarks", // Bookmarks
+    "ms-vscode.references-view", // References view
 
-    // === TERMINAL Y SHELL ===
-    "timonwong.shellcheck",
-    "rogalmic.bash-debug",
+    // 🧪 TESTING & DEBUGGING
+    "Orta.vscode-jest", // Jest testing
+    "hbenl.vscode-test-explorer", // Test Explorer
 
-    // === API TESTING ===
-    "humao.rest-client",
-    "rangav.vscode-thunder-client",
-    "Postman.postman-for-vscode",
+    // 📝 DOCUMENTATION & MARKDOWN
+    "yzhang.markdown-all-in-one", // Markdown support
+    "shd101wyy.markdown-preview-enhanced", // Markdown preview
+    "bierner.markdown-mermaid", // Mermaid diagrams
 
-    // === TEMAS Y ICONOS ===
-    "PKief.material-icon-theme",
-    "zhuangtongfa.material-theme",
-    "johnpapa.vscode-peacock",
+    // 🎨 STYLING & THEMES
+    "GitHub.github-vscode-theme", // GitHub theme
+    "ms-vscode.vscode-emmet", // Emmet
 
-    // === UTILIDADES ADICIONALES ===
-    "ms-vscode.vscode-json",
-    "redhat.vscode-yaml",
-    "DavidAnson.vscode-markdownlint",
-    "yzhang.markdown-all-in-one",
-    "shd101wyy.markdown-preview-enhanced",
+    // 🔧 DEVELOPMENT TOOLS
+    "ms-vscode.vscode-docker", // Docker support
+    "redhat.vscode-yaml", // YAML support
+    "redhat.vscode-xml", // XML support
 
-    // === EXTENSIONES PARA COMPETENCIA ===
-    "formulahendry.code-runner",
-    "ms-vscode.vscode-typescript-next",
-    "esbenp.prettier-vscode"
+    // 🚀 PERFORMANCE & OPTIMIZATION
+    "ms-vscode.vscode-memory-usage", // Memory usage
+
+    // 🌟 WORLDSKILLS SPECIFIC
+    "ms-vscode.vscode-web-accessibility", // Web accessibility
+    "ms-vscode.vscode-lighthouse", // Lighthouse
+
+    // 🔒 SECURITY & QUALITY
+    "SonarSource.sonarlint-vscode", // SonarLint
+
+    // 🛠️ BUILD & DEPLOYMENT
+    "ms-vscode.vscode-npm", // NPM support
+
+    // 📱 RESPONSIVE DESIGN
+    "ms-vscode.vscode-browser-preview", // Browser preview
+
+    // 🎪 SNIPPETS & TEMPLATES
+    "humao.rest-client", // REST client
+
+    // 🌐 WEB DEVELOPMENT ESSENTIALS
+    "ms-vscode.vscode-web-dev-extension-pack" // Web dev pack
+  ],
+
+  // 🚫 EXTENSIONES NO RECOMENDADAS
+  "unwantedRecommendations": [
+    // Extensiones conflictivas o redundantes
+    "ms-vscode.vscode-typescript-hero", // Conflicto con TypeScript
+    "ms-vscode.vscode-bracket-pair-colorizer", // Deprecated (built-in now)
+    "hookyqr.beautify", // Conflicto con Prettier
+    "ms-vscode.vscode-php-debug", // No necesario para este stack
+    "ms-vscode.vscode-python", // No necesario para este stack
+    "ms-vscode.vscode-java", // No necesario para este stack
+    "ms-vscode.vscode-go", // No necesario para este stack
+    "ms-vscode.vscode-rust", // No necesario para este stack
+    "ms-vscode.vscode-ruby", // No necesario para este stack
+    "ms-vscode.vscode-powershell" // No necesario para este stack
   ]
 }
