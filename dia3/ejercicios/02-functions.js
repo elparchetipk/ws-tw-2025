@@ -10,17 +10,17 @@ console.log('\n--- Ejercicio 2.1: Convertir a Arrow Functions ---');
 
 // Funciones tradicionales
 function suma(a, b) {
-    return a + b;
+  return a + b;
 }
 
 function saludar(nombre) {
-    return `Hola, ${nombre}!`;
+  return `Hola, ${nombre}!`;
 }
 
 function procesarNumeros(numeros) {
-    return numeros.map(function(num) {
-        return num * 2;
-    });
+  return numeros.map(function (num) {
+    return num * 2;
+  });
 }
 
 console.log('Función tradicional:', suma(5, 3));
@@ -43,29 +43,29 @@ console.log('Arrow function:', procesarNumerosArrow([1, 2, 3, 4]));
 console.log('\n--- Ejercicio 2.2: Contexto (this) en Arrow Functions ---');
 
 const persona = {
-    nombre: 'Carlos',
-    edad: 30,
-    
-    // Método tradicional
-    saludarTradicional: function() {
-        console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`);
-    },
-    
-    // Arrow function (problema potencial)
-    saludarArrow: () => {
-        console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`);
-    },
-    
-    // Método que usa setTimeout
-    saludarDespues: function() {
-        setTimeout(function() {
-            console.log(`Timeout tradicional: ${this.nombre}`);
-        }, 100);
-        
-        setTimeout(() => {
-            console.log(`Timeout arrow: ${this.nombre}`);
-        }, 200);
-    }
+  nombre: 'Carlos',
+  edad: 30,
+
+  // Método tradicional
+  saludarTradicional: function () {
+    console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`);
+  },
+
+  // Arrow function (problema potencial)
+  saludarArrow: () => {
+    console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`);
+  },
+
+  // Método que usa setTimeout
+  saludarDespues: function () {
+    setTimeout(function () {
+      console.log(`Timeout tradicional: ${this.nombre}`);
+    }, 100);
+
+    setTimeout(() => {
+      console.log(`Timeout arrow: ${this.nombre}`);
+    }, 200);
+  },
 };
 
 persona.saludarTradicional();
@@ -79,12 +79,12 @@ console.log('\n--- Ejercicio 2.3: Parámetros por Defecto ---');
 
 // Función con parámetros por defecto
 const crearUsuario = (nombre = 'Anónimo', edad = 0, activo = true) => {
-    return {
-        nombre,
-        edad,
-        activo,
-        info: `Usuario: ${nombre}, Edad: ${edad}, Activo: ${activo}`
-    };
+  return {
+    nombre,
+    edad,
+    activo,
+    info: `Usuario: ${nombre}, Edad: ${edad}, Activo: ${activo}`,
+  };
 };
 
 console.log(crearUsuario());
@@ -96,18 +96,18 @@ console.log(crearUsuario('Ana', 30, false));
 // La operación debe ser 'suma' por defecto
 // Tu solución aquí:
 const calculadora = (num1, num2, operacion = 'suma') => {
-    switch(operacion) {
-        case 'suma':
-            return num1 + num2;
-        case 'resta':
-            return num1 - num2;
-        case 'multiplicacion':
-            return num1 * num2;
-        case 'division':
-            return num2 !== 0 ? num1 / num2 : 'Error: División por cero';
-        default:
-            return 'Operación no válida';
-    }
+  switch (operacion) {
+    case 'suma':
+      return num1 + num2;
+    case 'resta':
+      return num1 - num2;
+    case 'multiplicacion':
+      return num1 * num2;
+    case 'division':
+      return num2 !== 0 ? num1 / num2 : 'Error: División por cero';
+    default:
+      return 'Operación no válida';
+  }
 };
 
 console.log('Calculadora:', calculadora(10, 5)); // suma por defecto
@@ -122,7 +122,7 @@ console.log('\n--- Ejercicio 2.4: Rest Parameters ---');
 
 // Función que suma números variables
 const sumarTodos = (...numeros) => {
-    return numeros.reduce((total, num) => total + num, 0);
+  return numeros.reduce((total, num) => total + num, 0);
 };
 
 console.log('Suma todos:', sumarTodos(1, 2, 3, 4, 5));
@@ -133,12 +133,14 @@ console.log('Suma todos:', sumarTodos(1));
 // Debe retornar un objeto con el nombre y un array de hobbies
 // Tu solución aquí:
 const crearPerfil = (nombre, ...hobbies) => {
-    return {
-        nombre,
-        hobbies,
-        cantidadHobbies: hobbies.length,
-        descripcion: `${nombre} tiene ${hobbies.length} hobbies: ${hobbies.join(', ')}`
-    };
+  return {
+    nombre,
+    hobbies,
+    cantidadHobbies: hobbies.length,
+    descripcion: `${nombre} tiene ${hobbies.length} hobbies: ${hobbies.join(
+      ', '
+    )}`,
+  };
 };
 
 console.log(crearPerfil('Ana', 'leer', 'correr', 'cocinar'));
@@ -158,11 +160,11 @@ console.log('Otros:', otros);
 
 // Destructuring de objetos
 const producto = {
-    id: 1,
-    nombre: 'Laptop',
-    precio: 1200,
-    categoria: 'Electrónicos',
-    disponible: true
+  id: 1,
+  nombre: 'Laptop',
+  precio: 1200,
+  categoria: 'Electrónicos',
+  disponible: true,
 };
 
 const { nombre, precio, disponible = false } = producto;
@@ -176,7 +178,7 @@ console.log('Renombrado:', nombreProducto, precioProducto);
 // para extraer nombre, email y edad (con valor por defecto 18)
 // Tu solución aquí:
 const procesarUsuario = ({ nombre, email, edad = 18 }) => {
-    return `Usuario: ${nombre}, Email: ${email}, Edad: ${edad}`;
+  return `Usuario: ${nombre}, Email: ${email}, Edad: ${edad}`;
 };
 
 const usuario1 = { nombre: 'María', email: 'maria@test.com', edad: 25 };
@@ -198,15 +200,15 @@ console.log('Arrays combinados:', combinados);
 
 // Spread con objetos
 const configuracionBase = {
-    tema: 'oscuro',
-    idioma: 'es',
-    notificaciones: true
+  tema: 'oscuro',
+  idioma: 'es',
+  notificaciones: true,
 };
 
 const configuracionUsuario = {
-    ...configuracionBase,
-    idioma: 'en',
-    usuario: 'Juan'
+  ...configuracionBase,
+  idioma: 'en',
+  usuario: 'Juan',
 };
 
 console.log('Configuración:', configuracionUsuario);
@@ -214,7 +216,7 @@ console.log('Configuración:', configuracionUsuario);
 // TODO: Crea una función que clone un array y le agregue un elemento al final
 // Tu solución aquí:
 const agregarElemento = (array, elemento) => {
-    return [...array, elemento];
+  return [...array, elemento];
 };
 
 const frutas = ['manzana', 'banana'];
@@ -235,63 +237,63 @@ console.log('\n--- 🎯 Desafío: Calculadora Avanzada ---');
 // 5. Pueda procesar múltiples operaciones
 
 class CalculadoraAvanzada {
-    constructor() {
-        this.historial = [];
+  constructor() {
+    this.historial = [];
+  }
+
+  // Operaciones básicas
+  suma = (a, b) => a + b;
+  resta = (a, b) => a - b;
+  multiplicacion = (a, b) => a * b;
+  division = (a, b) => (b !== 0 ? a / b : null);
+
+  // Método principal
+  calcular = (operacion, ...numeros) => {
+    if (numeros.length < 2) {
+      return 'Error: Se necesitan al menos 2 números';
     }
-    
-    // Operaciones básicas
-    suma = (a, b) => a + b;
-    resta = (a, b) => a - b;
-    multiplicacion = (a, b) => a * b;
-    division = (a, b) => b !== 0 ? a / b : null;
-    
-    // Método principal
-    calcular = (operacion, ...numeros) => {
-        if (numeros.length < 2) {
-            return 'Error: Se necesitan al menos 2 números';
+
+    let resultado;
+    const [a, b] = numeros;
+
+    switch (operacion) {
+      case 'suma':
+        resultado = this.suma(a, b);
+        break;
+      case 'resta':
+        resultado = this.resta(a, b);
+        break;
+      case 'multiplicacion':
+        resultado = this.multiplicacion(a, b);
+        break;
+      case 'division':
+        resultado = this.division(a, b);
+        if (resultado === null) {
+          return 'Error: División por cero';
         }
-        
-        let resultado;
-        const [a, b] = numeros;
-        
-        switch(operacion) {
-            case 'suma':
-                resultado = this.suma(a, b);
-                break;
-            case 'resta':
-                resultado = this.resta(a, b);
-                break;
-            case 'multiplicacion':
-                resultado = this.multiplicacion(a, b);
-                break;
-            case 'division':
-                resultado = this.division(a, b);
-                if (resultado === null) {
-                    return 'Error: División por cero';
-                }
-                break;
-            default:
-                return 'Error: Operación no válida';
-        }
-        
-        // Agregar al historial
-        this.historial.push({
-            operacion,
-            numeros,
-            resultado,
-            fecha: new Date().toLocaleString()
-        });
-        
-        return resultado;
-    };
-    
-    // Obtener historial
-    obtenerHistorial = () => this.historial;
-    
-    // Limpiar historial
-    limpiarHistorial = () => {
-        this.historial = [];
-    };
+        break;
+      default:
+        return 'Error: Operación no válida';
+    }
+
+    // Agregar al historial
+    this.historial.push({
+      operacion,
+      numeros,
+      resultado,
+      fecha: new Date().toLocaleString(),
+    });
+
+    return resultado;
+  };
+
+  // Obtener historial
+  obtenerHistorial = () => this.historial;
+
+  // Limpiar historial
+  limpiarHistorial = () => {
+    this.historial = [];
+  };
 }
 
 // Prueba de la calculadora

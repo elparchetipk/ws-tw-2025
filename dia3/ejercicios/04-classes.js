@@ -9,37 +9,37 @@ console.log('🚀 Ejercicio 4: Classes y Programación Orientada a Objetos');
 console.log('\n--- Ejercicio 4.1: Crear una Clase Básica ---');
 
 class Producto {
-    constructor(nombre, precio, categoria) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
-        this.fechaCreacion = new Date();
+  constructor(nombre, precio, categoria) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.categoria = categoria;
+    this.fechaCreacion = new Date();
+  }
+
+  // Método para obtener información
+  obtenerInfo() {
+    return `${this.nombre} - $${this.precio} (${this.categoria})`;
+  }
+
+  // Método para aplicar descuento
+  aplicarDescuento(porcentaje) {
+    this.precio = this.precio * (1 - porcentaje / 100);
+    return this.precio;
+  }
+
+  // Getter para precio formateado
+  get precioFormateado() {
+    return `$${this.precio.toFixed(2)}`;
+  }
+
+  // Setter para precio con validación
+  set nuevoPrecio(precio) {
+    if (precio > 0) {
+      this.precio = precio;
+    } else {
+      console.log('Error: El precio debe ser mayor a 0');
     }
-    
-    // Método para obtener información
-    obtenerInfo() {
-        return `${this.nombre} - $${this.precio} (${this.categoria})`;
-    }
-    
-    // Método para aplicar descuento
-    aplicarDescuento(porcentaje) {
-        this.precio = this.precio * (1 - porcentaje / 100);
-        return this.precio;
-    }
-    
-    // Getter para precio formateado
-    get precioFormateado() {
-        return `$${this.precio.toFixed(2)}`;
-    }
-    
-    // Setter para precio con validación
-    set nuevoPrecio(precio) {
-        if (precio > 0) {
-            this.precio = precio;
-        } else {
-            console.log('Error: El precio debe ser mayor a 0');
-        }
-    }
+  }
 }
 
 // Crear instancias
@@ -61,25 +61,30 @@ console.log('Nuevo precio:', laptop.precioFormateado);
 // TODO: Crea una clase Estudiante con nombre, edad y materias
 // Debe tener métodos para agregar materias y calcular promedio
 class Estudiante {
-    constructor(nombre, edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.materias = [];
-    }
-    
-    agregarMateria(materia, nota) {
-        this.materias.push({ materia, nota });
-    }
-    
-    calcularPromedio() {
-        if (this.materias.length === 0) return 0;
-        const suma = this.materias.reduce((total, materia) => total + materia.nota, 0);
-        return suma / this.materias.length;
-    }
-    
-    obtenerInfo() {
-        return `${this.nombre} (${this.edad} años) - Promedio: ${this.calcularPromedio().toFixed(2)}`;
-    }
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.materias = [];
+  }
+
+  agregarMateria(materia, nota) {
+    this.materias.push({ materia, nota });
+  }
+
+  calcularPromedio() {
+    if (this.materias.length === 0) return 0;
+    const suma = this.materias.reduce(
+      (total, materia) => total + materia.nota,
+      0
+    );
+    return suma / this.materias.length;
+  }
+
+  obtenerInfo() {
+    return `${this.nombre} (${
+      this.edad
+    } años) - Promedio: ${this.calcularPromedio().toFixed(2)}`;
+  }
 }
 
 // Prueba tu clase
@@ -95,51 +100,63 @@ console.log('Estudiante:', estudiante.obtenerInfo());
 console.log('\n--- Ejercicio 4.2: Herencia ---');
 
 class ProductoDigital extends Producto {
-    constructor(nombre, precio, categoria, formato, tamano) {
-        super(nombre, precio, categoria);
-        this.formato = formato;
-        this.tamano = tamano;
-        this.descargado = false;
-    }
-    
-    descargar() {
-        this.descargado = true;
-        return `${this.nombre} descargado exitosamente`;
-    }
-    
-    // Sobrescribir método padre
-    obtenerInfo() {
-        const infoBase = super.obtenerInfo();
-        return `${infoBase} [${this.formato}, ${this.tamano}MB]`;
-    }
+  constructor(nombre, precio, categoria, formato, tamano) {
+    super(nombre, precio, categoria);
+    this.formato = formato;
+    this.tamano = tamano;
+    this.descargado = false;
+  }
+
+  descargar() {
+    this.descargado = true;
+    return `${this.nombre} descargado exitosamente`;
+  }
+
+  // Sobrescribir método padre
+  obtenerInfo() {
+    const infoBase = super.obtenerInfo();
+    return `${infoBase} [${this.formato}, ${this.tamano}MB]`;
+  }
 }
 
 class ProductoFisico extends Producto {
-    constructor(nombre, precio, categoria, peso, dimensiones) {
-        super(nombre, precio, categoria);
-        this.peso = peso;
-        this.dimensiones = dimensiones;
-        this.enviado = false;
-    }
-    
-    enviar() {
-        this.enviado = true;
-        return `${this.nombre} enviado exitosamente`;
-    }
-    
-    calcularCostoEnvio() {
-        return this.peso * 0.5; // $0.5 por kg
-    }
-    
-    obtenerInfo() {
-        const infoBase = super.obtenerInfo();
-        return `${infoBase} [${this.peso}kg, ${this.dimensiones}]`;
-    }
+  constructor(nombre, precio, categoria, peso, dimensiones) {
+    super(nombre, precio, categoria);
+    this.peso = peso;
+    this.dimensiones = dimensiones;
+    this.enviado = false;
+  }
+
+  enviar() {
+    this.enviado = true;
+    return `${this.nombre} enviado exitosamente`;
+  }
+
+  calcularCostoEnvio() {
+    return this.peso * 0.5; // $0.5 por kg
+  }
+
+  obtenerInfo() {
+    const infoBase = super.obtenerInfo();
+    return `${infoBase} [${this.peso}kg, ${this.dimensiones}]`;
+  }
 }
 
 // Crear productos específicos
-const ebook = new ProductoDigital('Curso JavaScript', 49.99, 'Educación', 'PDF', 15);
-const libro = new ProductoFisico('Libro JavaScript', 29.99, 'Educación', 0.5, '20x15x2cm');
+const ebook = new ProductoDigital(
+  'Curso JavaScript',
+  49.99,
+  'Educación',
+  'PDF',
+  15
+);
+const libro = new ProductoFisico(
+  'Libro JavaScript',
+  29.99,
+  'Educación',
+  0.5,
+  '20x15x2cm'
+);
 
 console.log('Ebook:', ebook.obtenerInfo());
 console.log('Libro:', libro.obtenerInfo());
@@ -148,41 +165,41 @@ console.log('Costo envío libro:', libro.calcularCostoEnvio());
 // TODO: Crea una clase Empleado y dos subclases: EmpleadoTiempoCompleto y EmpleadoMedioTiempo
 // Cada una debe calcular el salario de manera diferente
 class Empleado {
-    constructor(nombre, salarioBase) {
-        this.nombre = nombre;
-        this.salarioBase = salarioBase;
-    }
-    
-    calcularSalario() {
-        return this.salarioBase;
-    }
-    
-    obtenerInfo() {
-        return `${this.nombre} - Salario: $${this.calcularSalario()}`;
-    }
+  constructor(nombre, salarioBase) {
+    this.nombre = nombre;
+    this.salarioBase = salarioBase;
+  }
+
+  calcularSalario() {
+    return this.salarioBase;
+  }
+
+  obtenerInfo() {
+    return `${this.nombre} - Salario: $${this.calcularSalario()}`;
+  }
 }
 
 class EmpleadoTiempoCompleto extends Empleado {
-    constructor(nombre, salarioBase, bonificacion = 0) {
-        super(nombre, salarioBase);
-        this.bonificacion = bonificacion;
-    }
-    
-    calcularSalario() {
-        return this.salarioBase + this.bonificacion;
-    }
+  constructor(nombre, salarioBase, bonificacion = 0) {
+    super(nombre, salarioBase);
+    this.bonificacion = bonificacion;
+  }
+
+  calcularSalario() {
+    return this.salarioBase + this.bonificacion;
+  }
 }
 
 class EmpleadoMedioTiempo extends Empleado {
-    constructor(nombre, tarifaHora, horasTrabajadas) {
-        super(nombre, 0);
-        this.tarifaHora = tarifaHora;
-        this.horasTrabajadas = horasTrabajadas;
-    }
-    
-    calcularSalario() {
-        return this.tarifaHora * this.horasTrabajadas;
-    }
+  constructor(nombre, tarifaHora, horasTrabajadas) {
+    super(nombre, 0);
+    this.tarifaHora = tarifaHora;
+    this.horasTrabajadas = horasTrabajadas;
+  }
+
+  calcularSalario() {
+    return this.tarifaHora * this.horasTrabajadas;
+  }
 }
 
 // Pruebas
@@ -198,25 +215,25 @@ console.log('Empleado medio tiempo:', empleado2.obtenerInfo());
 console.log('\n--- Ejercicio 4.3: Métodos Estáticos ---');
 
 class Utilidades {
-    static formatearMoneda(cantidad) {
-        return new Intl.NumberFormat('es-CO', {
-            style: 'currency',
-            currency: 'COP'
-        }).format(cantidad);
-    }
-    
-    static validarEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    }
-    
-    static calcularImpuesto(precio, porcentaje = 19) {
-        return precio * (porcentaje / 100);
-    }
-    
-    static generarId() {
-        return Date.now().toString(36) + Math.random().toString(36).substr(2);
-    }
+  static formatearMoneda(cantidad) {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+    }).format(cantidad);
+  }
+
+  static validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  static calcularImpuesto(precio, porcentaje = 19) {
+    return precio * (porcentaje / 100);
+  }
+
+  static generarId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+  }
 }
 
 // Usar métodos estáticos
@@ -227,28 +244,28 @@ console.log('ID generado:', Utilidades.generarId());
 
 // TODO: Crea una clase Calculadora con métodos estáticos para operaciones básicas
 class Calculadora {
-    static sumar(a, b) {
-        return a + b;
+  static sumar(a, b) {
+    return a + b;
+  }
+
+  static restar(a, b) {
+    return a - b;
+  }
+
+  static multiplicar(a, b) {
+    return a * b;
+  }
+
+  static dividir(a, b) {
+    if (b === 0) {
+      throw new Error('División por cero no permitida');
     }
-    
-    static restar(a, b) {
-        return a - b;
-    }
-    
-    static multiplicar(a, b) {
-        return a * b;
-    }
-    
-    static dividir(a, b) {
-        if (b === 0) {
-            throw new Error('División por cero no permitida');
-        }
-        return a / b;
-    }
-    
-    static potencia(base, exponente) {
-        return Math.pow(base, exponente);
-    }
+    return a / b;
+  }
+
+  static potencia(base, exponente) {
+    return Math.pow(base, exponente);
+  }
 }
 
 // Pruebas
@@ -264,76 +281,76 @@ console.log('Potencia:', Calculadora.potencia(2, 3));
 console.log('\n--- Ejercicio 4.4: Encapsulación con Propiedades Privadas ---');
 
 class CuentaBancaria {
-    #saldo = 0;
-    #pin = null;
-    
-    constructor(titular, pinInicial) {
-        this.titular = titular;
-        this.#pin = pinInicial;
-        this.historial = [];
+  #saldo = 0;
+  #pin = null;
+
+  constructor(titular, pinInicial) {
+    this.titular = titular;
+    this.#pin = pinInicial;
+    this.historial = [];
+  }
+
+  #validarPin(pin) {
+    return pin === this.#pin;
+  }
+
+  #registrarTransaccion(tipo, monto) {
+    this.historial.push({
+      tipo,
+      monto,
+      fecha: new Date(),
+      saldoResultante: this.#saldo,
+    });
+  }
+
+  depositar(monto, pin) {
+    if (!this.#validarPin(pin)) {
+      return 'PIN incorrecto';
     }
-    
-    #validarPin(pin) {
-        return pin === this.#pin;
+
+    if (monto <= 0) {
+      return 'El monto debe ser positivo';
     }
-    
-    #registrarTransaccion(tipo, monto) {
-        this.historial.push({
-            tipo,
-            monto,
-            fecha: new Date(),
-            saldoResultante: this.#saldo
-        });
+
+    this.#saldo += monto;
+    this.#registrarTransaccion('depósito', monto);
+    return `Depósito exitoso. Saldo actual: $${this.#saldo}`;
+  }
+
+  retirar(monto, pin) {
+    if (!this.#validarPin(pin)) {
+      return 'PIN incorrecto';
     }
-    
-    depositar(monto, pin) {
-        if (!this.#validarPin(pin)) {
-            return 'PIN incorrecto';
-        }
-        
-        if (monto <= 0) {
-            return 'El monto debe ser positivo';
-        }
-        
-        this.#saldo += monto;
-        this.#registrarTransaccion('depósito', monto);
-        return `Depósito exitoso. Saldo actual: $${this.#saldo}`;
+
+    if (monto <= 0) {
+      return 'El monto debe ser positivo';
     }
-    
-    retirar(monto, pin) {
-        if (!this.#validarPin(pin)) {
-            return 'PIN incorrecto';
-        }
-        
-        if (monto <= 0) {
-            return 'El monto debe ser positivo';
-        }
-        
-        if (monto > this.#saldo) {
-            return 'Saldo insuficiente';
-        }
-        
-        this.#saldo -= monto;
-        this.#registrarTransaccion('retiro', monto);
-        return `Retiro exitoso. Saldo actual: $${this.#saldo}`;
+
+    if (monto > this.#saldo) {
+      return 'Saldo insuficiente';
     }
-    
-    consultarSaldo(pin) {
-        if (!this.#validarPin(pin)) {
-            return 'PIN incorrecto';
-        }
-        
-        return `Saldo actual: $${this.#saldo}`;
+
+    this.#saldo -= monto;
+    this.#registrarTransaccion('retiro', monto);
+    return `Retiro exitoso. Saldo actual: $${this.#saldo}`;
+  }
+
+  consultarSaldo(pin) {
+    if (!this.#validarPin(pin)) {
+      return 'PIN incorrecto';
     }
-    
-    cambiarPin(pinActual, pinNuevo) {
-        if (!this.#validarPin(pinActual)) {
-            return 'PIN actual incorrecto';
-        }
-        
-        this.#pin = pinNuevo;
-        return 'PIN cambiado exitosamente';
+
+    return `Saldo actual: $${this.#saldo}`;
+  }
+
+  cambiarPin(pinActual, pinNuevo) {
+    if (!this.#validarPin(pinActual)) {
+      return 'PIN actual incorrecto';
     }
+
+    this.#pin = pinNuevo;
+    return 'PIN cambiado exitosamente';
+  }
 }
 
 // Prueba la cuenta bancaria
@@ -351,61 +368,61 @@ console.log('Historial:', cuenta.historial);
 console.log('\n--- 🎯 Desafío: Sistema de Gestión de Inventario ---');
 
 class Inventario {
-    constructor() {
-        this.productos = [];
-        this.siguienteId = 1;
+  constructor() {
+    this.productos = [];
+    this.siguienteId = 1;
+  }
+
+  agregarProducto(nombre, precio, categoria, cantidad = 0) {
+    const producto = {
+      id: this.siguienteId++,
+      nombre,
+      precio,
+      categoria,
+      cantidad,
+      fechaCreacion: new Date(),
+    };
+
+    this.productos.push(producto);
+    return `Producto ${nombre} agregado con ID: ${producto.id}`;
+  }
+
+  buscarProducto(id) {
+    return this.productos.find(p => p.id === id);
+  }
+
+  actualizarStock(id, cantidad) {
+    const producto = this.buscarProducto(id);
+    if (!producto) {
+      return 'Producto no encontrado';
     }
-    
-    agregarProducto(nombre, precio, categoria, cantidad = 0) {
-        const producto = {
-            id: this.siguienteId++,
-            nombre,
-            precio,
-            categoria,
-            cantidad,
-            fechaCreacion: new Date()
-        };
-        
-        this.productos.push(producto);
-        return `Producto ${nombre} agregado con ID: ${producto.id}`;
-    }
-    
-    buscarProducto(id) {
-        return this.productos.find(p => p.id === id);
-    }
-    
-    actualizarStock(id, cantidad) {
-        const producto = this.buscarProducto(id);
-        if (!producto) {
-            return 'Producto no encontrado';
-        }
-        
-        producto.cantidad += cantidad;
-        return `Stock actualizado. Cantidad actual: ${producto.cantidad}`;
-    }
-    
-    obtenerProductosPorCategoria(categoria) {
-        return this.productos.filter(p => p.categoria === categoria);
-    }
-    
-    obtenerValorTotal() {
-        return this.productos.reduce((total, producto) => {
-            return total + (producto.precio * producto.cantidad);
-        }, 0);
-    }
-    
-    obtenerProductosBajoStock(limite = 10) {
-        return this.productos.filter(p => p.cantidad < limite);
-    }
-    
-    generarReporte() {
-        return {
-            totalProductos: this.productos.length,
-            valorTotal: this.obtenerValorTotal(),
-            categorias: [...new Set(this.productos.map(p => p.categoria))],
-            productosBajoStock: this.obtenerProductosBajoStock().length
-        };
-    }
+
+    producto.cantidad += cantidad;
+    return `Stock actualizado. Cantidad actual: ${producto.cantidad}`;
+  }
+
+  obtenerProductosPorCategoria(categoria) {
+    return this.productos.filter(p => p.categoria === categoria);
+  }
+
+  obtenerValorTotal() {
+    return this.productos.reduce((total, producto) => {
+      return total + producto.precio * producto.cantidad;
+    }, 0);
+  }
+
+  obtenerProductosBajoStock(limite = 10) {
+    return this.productos.filter(p => p.cantidad < limite);
+  }
+
+  generarReporte() {
+    return {
+      totalProductos: this.productos.length,
+      valorTotal: this.obtenerValorTotal(),
+      categorias: [...new Set(this.productos.map(p => p.categoria))],
+      productosBajoStock: this.obtenerProductosBajoStock().length,
+    };
+  }
 }
 
 // Prueba del sistema
@@ -417,7 +434,10 @@ console.log(inventario.agregarProducto('Teclado', 80, 'Accesorios', 15));
 console.log(inventario.agregarProducto('Monitor', 300, 'Electrónicos', 3));
 
 console.log('Stock actualizado:', inventario.actualizarStock(1, 10));
-console.log('Productos electrónicos:', inventario.obtenerProductosPorCategoria('Electrónicos'));
+console.log(
+  'Productos electrónicos:',
+  inventario.obtenerProductosPorCategoria('Electrónicos')
+);
 console.log('Valor total inventario:', inventario.obtenerValorTotal());
 console.log('Productos bajo stock:', inventario.obtenerProductosBajoStock(8));
 console.log('Reporte general:', inventario.generarReporte());
@@ -430,6 +450,8 @@ console.log('✅ Las clases organizan el código de manera clara y reutilizable'
 console.log('✅ La herencia permite reutilizar código y crear jerarquías');
 console.log('✅ Los métodos estáticos son útiles para utilidades');
 console.log('✅ La encapsulación protege los datos importantes');
-console.log('✅ Los getters y setters permiten controlar el acceso a propiedades');
+console.log(
+  '✅ Los getters y setters permiten controlar el acceso a propiedades'
+);
 console.log('✅ super() es crucial para trabajar con herencia');
 console.log('✅ Las propiedades privadas (#) aumentan la seguridad del código');
